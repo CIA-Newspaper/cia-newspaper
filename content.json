@@ -129,74 +129,73 @@
     "answer": "A KEYBOARD"
   },
   "crossword": {
-    "answers": [
-      "C",
-      "E",
-      "L",
-      "M",
-      "A",
-      "P",
-      "C",
-      "E",
-      "A",
-      "O",
-      "C",
-      "I",
-      "C",
-      "E",
-      "A",
-      "R",
-      "C",
-      "N",
-      "T",
-      "T",
-      "I",
-      "M",
-      "A",
-      "T",
-      "R",
-      "I",
-      "A",
-      "O",
-      "C",
-      "E",
-      "E",
-      "G",
-      "R",
-      "A",
-      "E",
-      "V",
-      "M",
-      "A",
-      "S",
-      "S",
-      "E",
-      "S",
-      "E",
-      "A",
-      "L"
-    ],
-    "cluesAcross": [
-      "Basic unit of life.",
-      "Three-sided shape.",
-      "Frozen water.",
-      "Person in a story."
-    ],
-    "cluesDown": [
-      "Ruler of a kingdom.",
-      "Force pulling objects down.",
-      "Number divisible by two.",
-      "Large body of salt water."
-    ],
-    "numbers": [
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8
+    "rows": 11,
+    "cols": 9,
+    "entries": [
+      {
+        "number": 1,
+        "direction": "across",
+        "answer": "CHARACTER",
+        "row": 0,
+        "col": 0,
+        "clue": "English: Person in a story."
+      },
+      {
+        "number": 2,
+        "direction": "down",
+        "answer": "KING",
+        "row": 2,
+        "col": 2,
+        "clue": "History: Ruler of a kingdom."
+      },
+      {
+        "number": 3,
+        "direction": "across",
+        "answer": "TRIANGLE",
+        "row": 3,
+        "col": 0,
+        "clue": "Maths: Three-sided shape."
+      },
+      {
+        "number": 4,
+        "direction": "down",
+        "answer": "GRAVITY",
+        "row": 3,
+        "col": 5,
+        "clue": "Science: Force pulling objects down."
+      },
+      {
+        "number": 5,
+        "direction": "down",
+        "answer": "EVEN",
+        "row": 3,
+        "col": 7,
+        "clue": "Maths: Number divisible by two."
+      },
+      {
+        "number": 6,
+        "direction": "down",
+        "answer": "OCEAN",
+        "row": 5,
+        "col": 0,
+        "clue": "Geography: Large body of salt water."
+      },
+      {
+        "number": 7,
+        "direction": "across",
+        "answer": "CELL",
+        "row": 6,
+        "col": 0,
+        "clue": "Science: Basic unit of life."
+      },
+      {
+        "number": 8,
+        "direction": "across",
+        "answer": "ICE",
+        "row": 10,
+        "col": 0,
+        "clue": "Geography: Frozen water."
+      }
     ]
   },
   "googleFormUrl": "https://docs.google.com/forms/d/e/1FAIpQLSekGrcl2J5drpdF4tVmD4_ixBrldUaqGu8euyTSRJz_ZMScMA/viewform?usp=publish-editor"

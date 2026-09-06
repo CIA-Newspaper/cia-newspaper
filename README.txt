@@ -1,27 +1,18 @@
-THE INTELLIGENCE — CIA Student Newspaper
+THE INTELLIGENCE — FINAL CLEAN VERSION
 
-GitHub Pages structure:
-  index.html
-  content.json
-  admin.html
-  assets/
-  past_editions/
+FILES
+- index.html — self-contained newspaper; does not require content.json to display.
+- admin.html — polished content desk with built-in defaults, import/export, draft save, and crossword editor.
+- content.json — editable source content.
+- assets/ — CIA crest and campus imagery.
+- past_editions/ — placeholder newsletter PDFs.
 
-IMPORTANT:
-This version has the current newspaper content embedded inside index.html as a fallback.
-That means the site will still display even if the browser cannot fetch content.json.
-When hosted correctly, it will load the latest content.json first.
+GITHUB PAGES
+1. Upload all files/folders to the repository root.
+2. Keep index.html, content.json, and admin.html beside each other.
+3. GitHub Pages publishes index.html automatically from the configured branch/root.
+4. Hard-refresh with Ctrl+Shift+R after committing updates.
 
-If GitHub Pages is used, set Settings > Pages > Deploy from a branch > main > /(root).
-After uploading, allow a few minutes for the Pages site to update.
-
-Admin workflow:
-  1. Open admin.html
-  2. Edit content
-  3. Download content.json
-  4. Replace the repository's content.json
-  5. Commit the change
-
-Suggestion form:
-The current Google Form link is stored in content.json and also included as the fallback
-site data in index.html.
+CONTENT WORKFLOW
+Open admin.html, edit content, click Download content.json, then replace content.json in GitHub and commit.
+The crossword editor stores exact answer lengths and starting coordinates, so clues and the numbered grid stay in sync.
