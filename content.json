@@ -18,13 +18,13 @@
     },
     {
       "tag": "CREATIVE",
-      "title": "Placeholder Creative Club",
+      "title": "Placeholder Club",
       "text": "Placeholder description for a creative club.",
       "details": "Placeholder information about activities, meetings and participation."
     },
     {
       "tag": "ACADEMIC",
-      "title": "Placeholder Academic Club",
+      "title": "Placeholder Club",
       "text": "Placeholder description for an academic club.",
       "details": "Placeholder information about meetings, activities, competitions and membership."
     }
@@ -40,21 +40,21 @@
     {
       "day": "00",
       "month": "MON",
-      "title": "Placeholder School Event",
+      "title": "Placeholder Event",
       "details": "All Years • Placeholder Location • Placeholder Time",
       "type": "STUDENT VOICE"
     },
     {
       "day": "00",
       "month": "MON",
-      "title": "Placeholder Academic Event",
+      "title": "Placeholder Event",
       "details": "Placeholder Year Group • Placeholder Location • Placeholder Time",
       "type": "ACADEMIC"
     },
     {
       "day": "00",
       "month": "MON",
-      "title": "Placeholder Clubs Event",
+      "title": "Placeholder Event",
       "details": "All Secondary • Placeholder Location • Placeholder Time",
       "type": "CLUBS"
     }
@@ -64,20 +64,20 @@
       "tag": "FEATURED • SPOTLIGHT",
       "title": "Placeholder Student Achievement",
       "text": "Placeholder description for an outstanding piece of student work or achievement.",
-      "image": "assets/campus_wide.png",
+      "image": "",
       "featured": true
     },
     {
       "tag": "YEAR GROUP",
-      "title": "Placeholder Artwork",
-      "text": "Placeholder description for featured student artwork.",
+      "title": "Student Achievement",
+      "text": "Placeholder description for an outstanding piece of student work or achievement.",
       "image": "",
       "featured": false
     },
     {
       "tag": "YEAR GROUP",
-      "title": "Placeholder Writing",
-      "text": "Placeholder description for featured student writing.",
+      "title": "Placeholder Achievement",
+      "text": "Placeholder description for an outstanding piece of student work or achievement.",
       "image": "",
       "featured": false
     }
@@ -92,31 +92,31 @@
       "text": "Placeholder sports announcement."
     },
     {
-      "tag": "LIBRARY",
-      "text": "Placeholder library announcement."
+      "tag": "ANNOUNCEMENT",
+      "text": "Placeholder announcement."
     },
     {
       "tag": "REMINDER",
-      "text": "Placeholder reminder for students."
+      "text": "Placeholder reminder"
     }
   ],
   "newsletters": [
     {
-      "month": "MONTH YEAR",
+      "month": "SEPTEMBER 2026",
       "issue": "Issue 00",
       "title": "Placeholder Newsletter",
       "text": "Placeholder • Placeholder • Placeholder",
       "pdf": "past_editions/september_2026.pdf"
     },
     {
-      "month": "MONTH YEAR",
+      "month": "JUNE 2026",
       "issue": "Previous Edition",
       "title": "Placeholder Previous Newsletter",
       "text": "Placeholder • Placeholder • Placeholder",
       "pdf": "past_editions/june_2026.pdf"
     },
     {
-      "month": "MONTH YEAR",
+      "month": "MARCH 2026",
       "issue": "Previous Edition",
       "title": "Placeholder Newsletter",
       "text": "Placeholder • Placeholder • Placeholder",
