@@ -1,18 +1,37 @@
-THE INTELLIGENCE — FINAL CLEAN VERSION
+THE INTELLIGENCE — STUDENT NEWSPAPER
 
 FILES
-- index.html — self-contained newspaper; does not require content.json to display.
-- admin.html — polished content desk with built-in defaults, import/export, draft save, and crossword editor.
-- content.json — editable source content.
-- assets/ — CIA crest and campus imagery.
-- past_editions/ — placeholder newsletter PDFs.
+- index.html — the public newspaper website.
+- admin.html — the Content Desk for editing an issue.
+- content.json — the single source of truth for all editable content.
+- assets/ — the crest and campus images.
+- past_editions/ — linked newsletter PDFs.
 
-GITHUB PAGES
-1. Upload all files/folders to the repository root.
-2. Keep index.html, content.json, and admin.html beside each other.
-3. GitHub Pages publishes index.html automatically from the configured branch/root.
-4. Hard-refresh with Ctrl+Shift+R after committing updates.
+PUBLISHING WITH GITHUB PAGES
+1. Keep every file and folder in the repository root.
+2. In GitHub Pages, publish from the configured branch and repository root.
+3. Visit index.html normally through the GitHub Pages address. The site loads content.json automatically.
+4. After committing an update, hard-refresh the webpage (Ctrl+Shift+R) if you still see an older issue.
 
-CONTENT WORKFLOW
-Open admin.html, edit content, click Download content.json, then replace content.json in GitHub and commit.
-The crossword editor stores exact answer lengths and starting coordinates, so clues and the numbered grid stay in sync.
+EDITING AN ISSUE
+1. Open admin.html from the published GitHub Pages site.
+2. Make your changes and choose Download content.json.
+3. Replace the repository’s content.json with the downloaded copy and commit the change.
+4. Open the newspaper and confirm the issue looks right.
+
+LOCAL PREVIEW
+Modern browsers do not let a local HTML file read content.json directly. In this folder, start a local web server:
+
+  python -m http.server 8000
+
+Then open http://localhost:8000/ in your browser. If you open admin.html directly from your computer instead, choose Import content.json before editing.
+
+CROSSWORD
+Entries in content.json use:
+- number: a unique positive clue number
+- direction: across or down
+- answer: letters only
+- row and col: zero-based starting position
+- clue: the displayed clue
+
+The Content Desk validates duplicate clue numbers, out-of-bounds entries, and conflicting letters before it downloads content.json. The public site also shows a clear error instead of a broken grid if a crossword is invalid.
