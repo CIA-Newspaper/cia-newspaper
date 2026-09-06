@@ -1,507 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Cambridge Intelligence | CIA Student Newspaper</title>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>The Intelligence</title>
 <style>
-:root{
-  --ink:#211f20;
-  --paper:#f3ecdd;
-  --paper2:#fbf7ee;
-  --gold:#c79a22;
-  --gold2:#e0b63d;
-  --maroon:#741f31;
-  --maroon2:#8e293d;
-  --grey:#66676a;
-  --line:#292627;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;color:var(--ink);
-  font-family:Georgia,"Times New Roman",serif;
-  background:
-    radial-gradient(rgba(40,30,20,.045) 1px,transparent 1px) 0 0/5px 5px,
-    var(--paper);
-}
-a{color:inherit;text-decoration:none}
-button,input,textarea,select{font:inherit}
-.site{
-  max-width:1280px;margin:auto;background:var(--paper2);
-  min-height:100vh;box-shadow:0 0 35px rgba(0,0,0,.15);
-}
-.top-secret{
-  background:var(--ink);color:#fff;text-align:center;
-  font:700 11px/1 Arial,sans-serif;letter-spacing:4px;padding:7px;
-}
-header{padding:20px 42px 13px;border-bottom:4px double var(--ink)}
-.header-grid{
-  display:grid;grid-template-columns:115px 1fr 180px;align-items:center;gap:20px
-}
-.crest{width:95px;height:105px;object-fit:contain}
-.kicker{
-  text-align:center;font:700 12px Arial,sans-serif;letter-spacing:4px;color:var(--maroon);
-  text-transform:uppercase
-}
-.masthead{
-  text-align:center;font-size:clamp(48px,7vw,86px);line-height:.9;
-  font-weight:900;letter-spacing:-4px;margin:8px 0
-}
-.submast{text-align:center;font-size:16px;font-style:italic}
-.edition{
-  border-left:1px solid #999;padding-left:20px;font:12px/1.6 Arial,sans-serif;
-  text-align:right;text-transform:uppercase
-}
-.edition strong{font-size:16px;color:var(--maroon)}
-nav{
-  position:sticky;top:0;z-index:20;background:var(--ink);color:white;
-  display:flex;justify-content:center;flex-wrap:wrap;border-bottom:4px solid var(--gold)
-}
-nav a{
-  font:700 12px Arial,sans-serif;letter-spacing:1px;text-transform:uppercase;
-  padding:13px 12px
-}
-nav a:hover{background:var(--gold);color:var(--ink)}
-.content{padding:28px 42px}
-.paper-meta{
-  display:flex;justify-content:space-between;gap:15px;border-bottom:1px solid #777;
-  padding-bottom:8px;margin-bottom:18px;font:11px Arial,sans-serif;text-transform:uppercase
-}
-.alert{
-  background:var(--maroon);color:#fff;padding:9px 12px;font:700 11px Arial,sans-serif;
-  letter-spacing:1px;margin-bottom:20px
-}
-.lead{
-  display:grid;grid-template-columns:2.1fr 1fr;gap:25px;
-  border-bottom:3px solid var(--ink);padding-bottom:25px
-}
-.hero-img{width:100%;height:310px;object-fit:cover;filter:saturate(.75) contrast(1.05)}
-.headline{
-  font-size:clamp(38px,5vw,64px);line-height:.94;margin:12px 0 14px;
-  letter-spacing:-2px
-}
-.deck{font-size:20px;line-height:1.3;margin-bottom:15px}
-.byline{font:700 10px Arial,sans-serif;text-transform:uppercase;letter-spacing:1px}
-.stamp{
-  display:inline-block;border:3px solid var(--maroon);color:var(--maroon);
-  padding:7px 10px;font:900 12px Arial,sans-serif;transform:rotate(-4deg);
-  margin:10px 0
-}
-.sidebar{
-  border-left:1px solid #999;padding-left:22px
-}
-.sidebar h3,.section-head{
-  font:900 17px Arial,sans-serif;text-transform:uppercase;letter-spacing:1px;
-  border-bottom:3px solid var(--ink);padding-bottom:7px;margin:0 0 12px
-}
-.brief{padding:12px 0;border-bottom:1px solid #aaa}
-.brief:last-child{border:0}
-.brief b{font-size:17px}
-.section{padding:32px 0;border-bottom:1px solid #777}
-.section-title{
-  display:flex;align-items:baseline;justify-content:space-between;gap:15px;
-  border-top:5px solid var(--ink);padding-top:8px;margin-bottom:18px
-}
-.section-title h2{font-size:35px;margin:0;letter-spacing:-1px}
-.section-title span{font:700 11px Arial,sans-serif;color:var(--maroon);text-transform:uppercase}
-.columns{columns:2;column-gap:35px}
-.article{break-inside:avoid;margin-bottom:18px}
-.article h3{font-size:23px;line-height:1.05;margin:0 0 7px}
-.article p{margin:0 0 8px;font-size:15px}
-.tag{
-  display:inline-block;background:var(--gold);padding:3px 7px;margin-bottom:6px;
-  font:800 9px Arial,sans-serif;text-transform:uppercase;letter-spacing:1px
-}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.card{
-  border:1px solid #777;background:#f7f0e2;padding:16px;position:relative
-}
-.card:before{
-  content:"CLASSIFIED";position:absolute;right:8px;top:8px;
-  font:900 8px Arial,sans-serif;color:rgba(116,31,49,.4);letter-spacing:1px
-}
-.card h3{margin:5px 0;font-size:23px}
-.card p{font-size:14px;margin:0 0 10px}
-.btn{
-  border:0;background:var(--maroon);color:#fff;padding:9px 12px;cursor:pointer;
-  font:700 11px Arial,sans-serif;text-transform:uppercase
-}
-.btn:hover{background:var(--ink)}
-.event{
-  display:grid;grid-template-columns:80px 1fr 90px;gap:18px;align-items:center;
-  border-bottom:1px solid #aaa;padding:14px 0
-}
-.event-date{
-  background:var(--ink);color:#fff;text-align:center;padding:8px
-}
-.event-date strong{display:block;font-size:28px;line-height:1}
-.event h3{margin:0;font-size:21px}.event p{margin:2px 0;font-size:14px}
-.event-type{text-align:right;font:700 10px Arial,sans-serif;text-transform:uppercase;color:var(--maroon)}
-.hof{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:16px}
-.hof img{width:100%;height:230px;object-fit:cover;filter:sepia(.25)}
-.hof .featured{grid-row:span 2}
-.hof-card{border:1px solid #888;background:#f7f0e2;padding:12px}
-.hof-card h3{font-size:22px;margin:7px 0}
-.announcements{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-.announcement{
-  border-left:5px solid var(--gold);background:#eee7d9;padding:13px
-}
-.announcement b{font:800 10px Arial,sans-serif;color:var(--maroon);text-transform:uppercase}
-.newsletters{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.newsletter{
-  border:1px solid #888;padding:16px;background:#f7f0e2
-}
-.newsletter .cover{
-  height:145px;background:var(--ink);color:#fff;display:flex;align-items:center;
-  justify-content:center;text-align:center;font-size:25px;padding:20px;margin-bottom:12px
-}
-.newsletter small{font:10px Arial,sans-serif;text-transform:uppercase;color:var(--maroon)}
-.puzzle-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.riddle{
-  background:var(--ink);color:#fff;padding:25px;text-align:center;
-  border-top:7px solid var(--gold)
-}
-.riddle h3{color:var(--gold2);font-size:27px;margin:0 0 10px}
-.answer{display:none;color:var(--gold2);font-weight:bold;margin-top:15px}
-.crossword{
-  background:#eee7d9;padding:20px;border:1px solid #888
-}
-.grid8{display:grid;grid-template-columns:repeat(8,35px);gap:2px;width:max-content;margin:15px auto}
-.grid8 input{width:35px;height:35px;text-align:center;text-transform:uppercase;border:1px solid #555;background:#fff;font-weight:bold}
-.grid8 input.block{background:var(--ink);pointer-events:none}
-.clues{font-size:13px}
-.clues b{color:var(--maroon)}
-.suggestion{
-  background:var(--ink);color:white;padding:25px;
-  display:grid;grid-template-columns:1fr 1.5fr;gap:30px
-}
-.suggestion h2{font-size:35px;margin-top:0;color:var(--gold2)}
-.suggestion p{color:#eee}
-.form input,.form select,.form textarea{
-  width:100%;padding:11px;margin-bottom:10px;border:1px solid #aaa;background:#fff
-}
-.form textarea{min-height:120px;resize:vertical}
-.form .btn{background:var(--gold);color:var(--ink)}
-footer{
-  background:var(--ink);color:#ddd;padding:28px 42px;display:flex;
-  justify-content:space-between;gap:20px;font:11px Arial,sans-serif
-}
-footer strong{color:var(--gold2);font-size:16px}
-.modal{
-  display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:50;
-  align-items:center;justify-content:center;padding:20px
-}
-.modal-box{
-  background:var(--paper2);max-width:560px;width:100%;padding:28px;border-top:7px solid var(--maroon);
-  box-shadow:0 10px 40px #000
-}
-.modal-box h2{margin-top:0;font-size:30px}
-.close{float:right;border:0;background:none;font-size:25px;cursor:pointer}
-@media(max-width:850px){
-  .content,header{padding-left:20px;padding-right:20px}
-  .header-grid{grid-template-columns:70px 1fr}
-  .crest{width:65px;height:75px}.edition{display:none}
-  .lead,.suggestion,.puzzle-grid{grid-template-columns:1fr}
-  .cards,.newsletters,.hof,.announcements{grid-template-columns:1fr}
-  .hof .featured{grid-row:auto}
-  .columns{columns:1}
-  .event{grid-template-columns:65px 1fr}
-  .event-type{display:none}
-  footer{padding:25px 20px;flex-direction:column}
-}
+:root{--ink:#211f20;--paper:#f3ecdd;--paper2:#fbf7ee;--gold:#c79a22;--gold2:#e0b63d;--maroon:#741f31}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font-family:Georgia,"Times New Roman",serif;background:radial-gradient(rgba(40,30,20,.045) 1px,transparent 1px) 0 0/5px 5px,var(--paper)}
+.site{max-width:1280px;margin:auto;background:var(--paper2);min-height:100vh;box-shadow:0 0 35px rgba(0,0,0,.15)}
+.top-secret{background:var(--ink);color:#fff;text-align:center;font:700 11px Arial;padding:7px;letter-spacing:4px}
+header{padding:20px 42px 13px;border-bottom:4px double var(--ink)}.header-grid{display:grid;grid-template-columns:115px 1fr 180px;align-items:center;gap:20px}.crest{width:95px;height:105px;object-fit:contain}.kicker{text-align:center;font:700 12px Arial;letter-spacing:4px;color:var(--maroon);text-transform:uppercase}.masthead{text-align:center;font-size:clamp(48px,7vw,86px);line-height:.9;font-weight:900;letter-spacing:-4px;margin:8px 0}.submast{text-align:center;font-size:16px;font-style:italic}.edition{border-left:1px solid #999;padding-left:20px;font:12px/1.6 Arial;text-align:right}.edition strong{font-size:16px;color:var(--maroon)}
+nav{position:sticky;top:0;z-index:20;background:var(--ink);color:white;display:flex;justify-content:center;flex-wrap:wrap;border-bottom:4px solid var(--gold)}nav a{font:700 12px Arial;letter-spacing:1px;text-transform:uppercase;padding:13px 12px}nav a:hover{background:var(--gold);color:var(--ink)}
+.content{padding:28px 42px}.paper-meta{display:flex;justify-content:space-between;gap:15px;border-bottom:1px solid #777;padding-bottom:8px;margin-bottom:18px;font:11px Arial;text-transform:uppercase}.alert{background:var(--maroon);color:#fff;padding:9px 12px;font:700 11px Arial;letter-spacing:1px;margin-bottom:20px}
+.lead{display:grid;grid-template-columns:2.1fr 1fr;gap:25px;border-bottom:3px solid var(--ink);padding-bottom:25px}.hero-img{width:100%;height:310px;object-fit:cover;filter:saturate(.75) contrast(1.05)}.headline{font-size:clamp(38px,5vw,64px);line-height:.94;margin:12px 0 14px;letter-spacing:-2px}.deck{font-size:20px;line-height:1.3;margin-bottom:15px}.byline{font:700 10px Arial;text-transform:uppercase;letter-spacing:1px}.stamp{display:inline-block;border:3px solid var(--maroon);color:var(--maroon);padding:7px 10px;font:900 12px Arial;transform:rotate(-4deg);margin:10px 0}.sidebar{border-left:1px solid #999;padding-left:22px}.sidebar h3,.section-head{font:900 17px Arial;text-transform:uppercase;letter-spacing:1px;border-bottom:3px solid var(--ink);padding-bottom:7px;margin:0 0 12px}.brief{padding:12px 0;border-bottom:1px solid #aaa}.brief:last-child{border:0}.brief b{font-size:17px}
+.section{padding:32px 0;border-bottom:1px solid #777}.section-title{display:flex;align-items:baseline;justify-content:space-between;gap:15px;border-top:5px solid var(--ink);padding-top:8px;margin-bottom:18px}.section-title h2{font-size:35px;margin:0;letter-spacing:-1px}.section-title span{font:700 11px Arial;color:var(--maroon);text-transform:uppercase}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{border:1px solid #777;background:#f7f0e2;padding:16px;position:relative}.card:before{content:"CLASSIFIED";position:absolute;right:8px;top:8px;font:900 8px Arial;color:rgba(116,31,49,.4);letter-spacing:1px}.card h3{margin:5px 0;font-size:23px}.card p{font-size:14px;margin:0 0 10px}.tag{display:inline-block;background:var(--gold);padding:3px 7px;margin-bottom:6px;font:800 9px Arial;text-transform:uppercase;letter-spacing:1px}.btn{display:inline-block;border:0;background:var(--maroon);color:#fff;padding:9px 12px;cursor:pointer;font:700 11px Arial;text-transform:uppercase;text-decoration:none}.btn:hover{background:var(--ink)}
+.event{display:grid;grid-template-columns:80px 1fr 90px;gap:18px;align-items:center;border-bottom:1px solid #aaa;padding:14px 0}.event-date{background:var(--ink);color:#fff;text-align:center;padding:8px}.event-date strong{display:block;font-size:28px;line-height:1}.event h3{margin:0;font-size:21px}.event p{margin:2px 0;font-size:14px}.event-type{text-align:right;font:700 10px Arial;text-transform:uppercase;color:var(--maroon)}
+.hof{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:16px}.hof img{width:100%;height:230px;object-fit:cover;filter:sepia(.25)}.hof-card{border:1px solid #888;background:#f7f0e2;padding:12px}.hof-card h3{font-size:22px;margin:7px 0}.hof .featured{grid-row:span 2}
+.announcements{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.announcement{border-left:5px solid var(--gold);background:#eee7d9;padding:13px}.announcement b{font:800 10px Arial;color:var(--maroon);text-transform:uppercase}
+.newsletters{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.newsletter{border:1px solid #888;padding:16px;background:#f7f0e2}.newsletter .cover{height:145px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;text-align:center;font-size:25px;padding:20px;margin-bottom:12px}.newsletter small{font:10px Arial;text-transform:uppercase;color:var(--maroon)}
+.puzzle-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.riddle{background:var(--ink);color:#fff;padding:25px;text-align:center;border-top:7px solid var(--gold)}.riddle h3{color:var(--gold2);font-size:27px;margin:0 0 10px}.answer{display:none;color:var(--gold2);font-weight:bold;margin-top:15px}.crossword{background:#eee7d9;padding:20px;border:1px solid #888}.grid8{display:grid;grid-template-columns:repeat(8,35px);gap:2px;width:max-content;margin:15px auto}.grid8 input{width:35px;height:35px;text-align:center;text-transform:uppercase;border:1px solid #555;background:#fff;font-weight:bold}.grid8 input.block{background:var(--ink);pointer-events:none}.clues{font-size:13px}.clues b{color:var(--maroon)}
+.suggestion{background:var(--ink);color:white;padding:25px;display:grid;grid-template-columns:1fr 1.5fr;gap:30px}.suggestion h2{font-size:35px;margin-top:0;color:var(--gold2)}.suggestion p{color:#eee}.form input,.form select,.form textarea{width:100%;padding:11px;margin-bottom:10px;border:1px solid #aaa;background:#fff}.form textarea{min-height:120px;resize:vertical}.form .btn{background:var(--gold);color:var(--ink)}
+footer{background:var(--ink);color:#ddd;padding:28px 42px;display:flex;justify-content:space-between;gap:20px;font:11px Arial}footer strong{color:var(--gold2);font-size:16px}.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:50;align-items:center;justify-content:center;padding:20px}.modal-box{background:var(--paper2);max-width:650px;width:100%;max-height:80vh;overflow:auto;padding:28px;border-top:7px solid var(--maroon);white-space:pre-wrap}.close{float:right;border:0;background:none;font-size:25px;cursor:pointer}
+@media(max-width:850px){.content,header{padding-left:20px;padding-right:20px}.header-grid{grid-template-columns:70px 1fr}.crest{width:65px;height:75px}.edition{display:none}.lead,.suggestion,.puzzle-grid{grid-template-columns:1fr}.cards,.newsletters,.hof,.announcements{grid-template-columns:1fr}.hof .featured{grid-row:auto}.event{grid-template-columns:65px 1fr}.event-type{display:none}footer{padding:25px 20px;flex-direction:column}}
 </style>
 </head>
 <body>
 <div class="site">
-  <div class="top-secret">CIA // STUDENT INFORMATION NETWORK // YEARS 7–9</div>
+<div class="top-secret">CIA // STUDENT INFORMATION NETWORK // YEARS 7–9</div>
+<header><div class="header-grid"><img class="crest" src="assets/cia_crest.png" alt="CIA crest"><div><div class="kicker" id="school"></div><div class="masthead" id="siteName"></div><div class="submast" id="subtitle"></div></div><div class="edition" id="edition"></div></div></header>
+<nav><a href="#front">Front Page</a><a href="#clubs">Clubs</a><a href="#events">Events</a><a href="#hall">Hall of Fame</a><a href="#briefing">Morning Briefing</a><a href="#archive">Archive</a><a href="#puzzles">Puzzles</a><a href="#suggest">Suggestion Box</a></nav>
+<main class="content">
+<div id="front" class="paper-meta"><span id="today"></span><span>Campus Dispatch • Years 7–9</span><span>READ • REPORT • PARTICIPATE</span></div>
+<div class="alert" id="alert"></div>
+<div class="lead"><article><img id="heroImage" class="hero-img"><div class="stamp">TOP STORY</div><h1 id="heroTitle" class="headline"></h1><p id="heroText" class="deck"></p><div class="byline">By The Student Editorial Team • Website & concept by Rushil Chauhan</div></article><aside class="sidebar"><h3>Inside this issue</h3><div class="brief"><b>Clubs need recruits.</b><br>See which activities are looking for new members.</div><div class="brief"><b>Events detected.</b><br>Dates, locations and times.</div><div class="brief"><b>Best work exposed.</b><br>Visit the Hall of Fame.</div><div class="brief"><b>Brain training.</b><br>Riddles and subject-themed crossword clues.</div></aside></div>
 
-  <header>
-    <div class="header-grid">
-      <img class="crest" src="assets/cia_crest.png" alt="Cambridge school crest">
-      <div>
-        <div class="kicker">Cambridge International Academy</div>
-        <div class="masthead">THE INTELLIGENCE</div>
-        <div class="submast">The official student newspaper for Years 7–9</div>
-      </div>
-      <div class="edition">
-        <strong>VOL. 01</strong><br>
-        ISSUE 01<br>
-        SEPTEMBER 2026<br>
-        PRICE: YOUR ATTENTION
-      </div>
-    </div>
-  </header>
+<section id="clubs" class="section"><div class="section-title"><h2>CLUBS & SOCIETIES</h2><span>Recruitment files</span></div><div id="clubsGrid" class="cards"></div></section>
+<section id="events" class="section"><div class="section-title"><h2>EVENTS CALENDAR</h2><span>Mission schedule</span></div><div id="eventsList"></div></section>
+<section id="hall" class="section"><div class="section-title"><h2>HALL OF FAME</h2><span>Outstanding evidence</span></div><div id="hofGrid" class="hof"></div></section>
+<section id="briefing" class="section"><div class="section-title"><h2>MORNING BRIEFING</h2><span>Declassified announcements</span></div><div id="announcements" class="announcements"></div></section>
+<section id="archive" class="section"><div class="section-title"><h2>THE ARCHIVE</h2><span>Previous editions</span></div><div id="newsletters" class="newsletters"></div></section>
+<section id="puzzles" class="section"><div class="section-title"><h2>PUZZLES & CIPHERS</h2><span>For your next mission</span></div><div class="puzzle-grid"><div class="riddle"><h3 id="riddleTitle"></h3><p id="riddleQuestion"></p><button class="btn" onclick="document.getElementById('answer').style.display='block'">Decrypt Answer</button><div id="answer" class="answer"></div></div><div class="crossword"><h3>Subject Crossword</h3><p>Fill the grid, then submit your answers.</p><div class="grid8" id="crosswordGrid"></div><button class="btn" onclick="checkCrossword()">Check Crossword</button> <button class="btn" onclick="resetCrossword()" style="background:#555">Reset</button><div id="crosswordResult" style="margin-top:12px;font-weight:bold"></div><div class="clues"><b>Across:</b> <span id="across"></span><br><br><b>Down:</b> <span id="down"></span></div></div></div></section>
 
-  <nav>
-    <a href="#front">Front Page</a>
-    <a href="#clubs">Clubs</a>
-    <a href="#events">Events</a>
-    <a href="#hall">Hall of Fame</a>
-    <a href="#briefing">Morning Briefing</a>
-    <a href="#archive">Archive</a>
-    <a href="#puzzles">Puzzles</a>
-    <a href="#suggest">Suggestion Box</a><a href="#credits">Credits</a>
-  </nav>
-
-  <main class="content">
-    <div id="front" class="paper-meta">
-      <span>Sunday, 6 September 2026</span>
-      <span>Campus Dispatch • Years 7–9</span>
-      <span>READ • REPORT • PARTICIPATE</span>
-    </div>
-
-    <div class="alert">BREAKING: STUDENT LIFE IS NOW OFFICIALLY UNDER INVESTIGATION.</div>
-
-    <div class="lead">
-      <article>
-        <img class="hero-img" src="assets/campus.jpg" alt="Cambridge International Academy campus">
-        <div class="stamp">TOP STORY</div>
-        <h1 class="headline">A NEW YEAR. A NEW OPERATION.</h1>
-        <p class="deck">
-          Welcome to <em>The Intelligence</em> — a student newspaper designed to keep Years 7–9
-          informed, involved and slightly more curious about what is happening around campus.
-        </p>
-        <div class="byline">By The Student Editorial Team • CIA Student Press</div>
-      </article>
-
-      <aside class="sidebar">
-        <h3>Inside this issue</h3>
-        <div class="brief"><b>Clubs need recruits.</b><br>See which activities are looking for new members.</div>
-        <div class="brief"><b>Events detected.</b><br>Dates, locations and times — no classified clearance required.</div>
-        <div class="brief"><b>Best work exposed.</b><br>Visit the Hall of Fame to see student work worth recognising.</div>
-        <div class="brief"><b>Brain training.</b><br>Riddles and subject-themed crossword clues await.</div>
-      </aside>
-    </div>
-
-    <section id="clubs" class="section">
-      <div class="section-title"><h2>CLUBS & SOCIETIES</h2><span>Recruitment files</span></div>
-      <div class="cards">
-        <div class="card"><span class="tag">SPORT</span><h3>Basketball Club</h3><p>Improve your game, compete and meet other students. Tuesdays after school.</p><button class="btn" onclick="openModal('Basketball Club','Meet in the Sports Hall every Tuesday after school. Bring your PE kit and water.')">View File</button></div>
-        <div class="card"><span class="tag">CREATIVE</span><h3>Art & Design</h3><p>Drawing, painting, design and creative projects. Beginners are welcome.</p><button class="btn" onclick="openModal('Art & Design Club','The creative department is open to anyone who wants to make something. Check the school noticeboard for the next meeting.')">View File</button></div>
-        <div class="card"><span class="tag">ACADEMIC</span><h3>Science Club</h3><p>Experiments, competitions and science beyond the normal classroom mission.</p><button class="btn" onclick="openModal('Science Club','Experiments, challenges and science competitions. Ask your Science teacher for the next meeting time.')">View File</button></div>
-      </div>
-    </section>
-
-    <section id="events" class="section">
-      <div class="section-title"><h2>EVENTS CALENDAR</h2><span>Mission schedule</span></div>
-      <div class="event"><div class="event-date"><strong>12</strong>SEP</div><div><h3>Inter-House Football</h3><p>Years 7–9 • Sports Field • 3:30 PM</p></div><div class="event-type">SPORT</div></div>
-      <div class="event"><div class="event-date"><strong>18</strong>SEP</div><div><h3>Student Council Elections</h3><p>All Years • Main Hall • Lunch</p></div><div class="event-type">STUDENT VOICE</div></div>
-      <div class="event"><div class="event-date"><strong>25</strong>SEP</div><div><h3>Year 8 Science Fair</h3><p>Year 8 • Science Block • 2:00 PM</p></div><div class="event-type">ACADEMIC</div></div>
-      <div class="event"><div class="event-date"><strong>30</strong>SEP</div><div><h3>Clubs Showcase</h3><p>Years 7–9 • Main Hall • Lunch</p></div><div class="event-type">CLUBS</div></div>
-    </section>
-
-    <section id="hall" class="section">
-      <div class="section-title"><h2>HALL OF FAME</h2><span>Outstanding evidence</span></div>
-      <div class="hof">
-        <div class="hof-card featured">
-          <img src="assets/campus_wide.png" alt="CIA campus">
-          <span class="tag">YEAR 9 • SPOTLIGHT</span>
-          <h3>Science Investigation of the Month</h3>
-          <p>An outstanding investigation into renewable energy, selected for clear reasoning, presentation and originality.</p>
-        </div>
-        <div class="hof-card"><span class="tag">YEAR 7</span><h3>Artwork of the Week</h3><p>“The City at Night” — selected by the Art Department.</p></div>
-        <div class="hof-card"><span class="tag">YEAR 8</span><h3>Writing of the Week</h3><p>A creative short story selected from this month's English submissions.</p></div>
-      </div>
-    </section>
-
-    <section id="briefing" class="section">
-      <div class="section-title"><h2>MORNING BRIEFING</h2><span>Declassified announcements</span></div>
-      <div class="announcements">
-        <div class="announcement"><b>Student Council</b><br>Applications for student leadership positions are now open.</div>
-        <div class="announcement"><b>Sports</b><br>Remember to bring appropriate sports equipment for PE this week.</div>
-        <div class="announcement"><b>Library</b><br>New books have arrived. Check the new arrivals shelf.</div>
-        <div class="announcement"><b>Reminder</b><br>Check your year-group Teams page for important updates.</div>
-      </div>
-    </section>
-
-    <section id="archive" class="section">
-      <div class="section-title"><h2>THE ARCHIVE</h2><span>Previous editions</span></div>
-      <div class="newsletters">
-        <div class="newsletter"><div class="cover">SEPTEMBER<br>2026</div><small>Issue 01</small><h3>Welcome Back Edition</h3><p>Clubs • Events • Student Council</p><a class="btn" href="past_editions/september_2026.pdf" target="_blank">Read Edition</a></div>
-        <div class="newsletter"><div class="cover">JUNE<br>2026</div><small>End of Year</small><h3>Year in Review</h3><p>Awards • Highlights • Student Work</p><a class="btn" href="past_editions/june_2026.pdf" target="_blank">Read Edition</a></div>
-        <div class="newsletter"><div class="cover">MARCH<br>2026</div><small>Spring</small><h3>Spring Edition</h3><p>Events • Competitions • Student Work</p><a class="btn" href="past_editions/march_2026.pdf" target="_blank">Read Edition</a></div>
-      </div>
-    </section>
-
-    <section id="puzzles" class="section">
-      <div class="section-title"><h2>PUZZLES & CIPHERS</h2><span>For your next mission</span></div>
-      <div class="puzzle-grid">
-        <div class="riddle">
-          <h3>Riddle of the Week</h3>
-          <p>I have keys but open no locks.<br>I have space but no room.<br>You can enter, but you can't go inside.</p>
-          <button class="btn" onclick="document.getElementById('answer').style.display='block'">Decrypt Answer</button>
-          <div id="answer" class="answer">ANSWER: A KEYBOARD</div>
-        </div>
-
-        <div class="crossword">
-          <h3>Subject Crossword</h3>
-          <p>Fill the grid, then submit your answers. The newspaper will tell you exactly which letters are right or wrong.</p>
-
-          <div class="grid8" id="crosswordGrid">
-            <input data-answer="C"><input data-answer="E"><input data-answer="L"><input class="block"><input data-answer="M"><input data-answer="A"><input data-answer="P"><input class="block">
-            <input data-answer="C"><input class="block"><input data-answer="E"><input class="block"><input data-answer="A"><input class="block"><input data-answer="O"><input data-answer="C">
-            <input data-answer="I"><input data-answer="C"><input data-answer="E"><input data-answer="A"><input data-answer="R"><input data-answer="C"><input class="block"><input data-answer="N">
-            <input class="block"><input class="block"><input data-answer="T"><input class="block"><input data-answer="T"><input data-answer="I"><input data-answer="M"><input data-answer="A">
-            <input data-answer="T"><input data-answer="R"><input data-answer="I"><input data-answer="A"><input class="block"><input data-answer="O"><input data-answer="C"><input data-answer="E">
-            <input data-answer="E"><input class="block"><input data-answer="G"><input data-answer="R"><input data-answer="A"><input class="block"><input data-answer="E"><input class="block">
-            <input data-answer="E"><input data-answer="V"><input class="block"><input data-answer="M"><input data-answer="A"><input data-answer="S"><input data-answer="S"><input data-answer="E">
-            <input class="block"><input data-answer="S"><input data-answer="E"><input data-answer="A"><input class="block"><input data-answer="E"><input data-answer="A"><input data-answer="L">
-          </div>
-
-          <button class="btn" onclick="checkCrossword()">Check Crossword</button>
-          <button class="btn" onclick="resetCrossword()" style="background:#555">Reset</button>
-          <div id="crosswordResult" style="margin-top:12px;font-weight:bold"></div>
-
-          <div class="clues">
-            <b>Across:</b> basic unit of life • three-sided shape • frozen water • person in a story<br><br>
-            <b>Down:</b> ruler of a kingdom • force pulling objects down • number divisible by two • large body of salt water
-          </div>
-        </div>
-      </div>
-    </div>
-    </section>
-
-    <section id="suggest" class="section">
-      <div class="suggestion">
-        <div>
-          <h2>DIGITAL SUGGESTION BOX</h2>
-          <p>Your information matters. Suggest a new article, event, club, competition or improvement to student life.</p>
-          <div class="stamp" style="color:var(--gold2);border-color:var(--gold2)">STUDENT VOICE</div>
-        </div>
-        <form class="form" id="suggestionForm">
-          <input id="name" placeholder="Name (optional)">
-          <select id="type">
-            <option value="">Suggestion category</option>
-            <option>Newspaper</option><option>Club</option><option>Event</option><option>Student Life</option><option>Other</option>
-          </select>
-          <textarea id="suggestion" placeholder="Write your suggestion..." required></textarea>
-          <button class="btn" type="submit">Transmit Suggestion</button>
-          <p id="formMessage"></p>
-          <button type="button" class="btn" onclick="viewSubmissions()" style="margin-top:8px;background:#555">View Saved Submissions</button>
-          <button type="button" class="btn" onclick="downloadSubmissions()" style="margin-top:8px;background:#555">Export Submissions</button>
-          <p style="font-size:11px;color:#bbb;margin-top:8px">Submissions are saved in this browser. Export them to move/read them elsewhere.</p>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer id="credits">
-    <div><strong>THE INTELLIGENCE</strong><br>CIA Student Press • Years 7–9</div>
-    <div>READ. REPORT. PARTICIPATE.<br>Student journalism with school spirit.<br><br>Website & concept by <strong>Rushil Chauhan</strong></div>
-  </footer>
+<section id="suggest" class="section"><div class="suggestion"><div><h2>DIGITAL SUGGESTION BOX</h2><p>Have an idea for the newspaper, a club, an event or student life? Send it directly through the school's Google Form.</p><div class="stamp" style="color:var(--gold2);border-color:var(--gold2)">STUDENT VOICE</div></div><div><p id="formWarning"></p><a id="formLink" class="btn" target="_blank" rel="noopener">Open Suggestion Form</a></div></div></section>
+</main>
+<footer><div><strong>THE INTELLIGENCE</strong><br>CIA Student Press • Years 7–9</div><div>READ. REPORT. PARTICIPATE.<br>Website & concept by <strong>Rushil Chauhan</strong></div></footer>
 </div>
-
-<div class="modal" id="modal">
-  <div class="modal-box">
-    <button class="close" onclick="closeModal()">×</button>
-    <h2 id="modalTitle"></h2>
-    <p id="modalText"></p>
-  </div>
-</div>
-
+<div class="modal" id="modal"><div class="modal-box"><button class="close" onclick="closeModal()">×</button><h2 id="modalTitle"></h2><p id="modalText"></p></div></div>
 <script>
-function openModal(title,text){
-  document.getElementById('modalTitle').textContent=title;
-  document.getElementById('modalText').textContent=text;
-  document.getElementById('modal').style.display='flex';
+let DATA=null;
+async function load(){
+ const r=await fetch('content.json'); DATA=await r.json();
+ document.getElementById('school').textContent=DATA.site.school;
+ document.getElementById('siteName').textContent=DATA.site.name;
+ document.getElementById('subtitle').textContent=DATA.site.subtitle;
+ document.getElementById('edition').innerHTML='<strong>'+DATA.site.edition.split('•')[0].trim()+'</strong><br>'+DATA.site.edition.split('•').slice(1).join('<br>');
+ document.getElementById('today').textContent=new Date().toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
+ document.getElementById('alert').textContent=DATA.site.alert;
+ document.getElementById('heroTitle').textContent=DATA.site.heroTitle;
+ document.getElementById('heroText').textContent=DATA.site.heroText;
+ document.getElementById('heroImage').src=DATA.site.heroImage;
+ document.getElementById('clubsGrid').innerHTML=DATA.clubs.map((x,i)=>`<div class="card"><span class="tag">${x.tag}</span><h3>${x.title}</h3><p>${x.text}</p><button class="btn" onclick="openModal('${esc(x.title)}','${esc(x.details)}')">View File</button></div>`).join('');
+ document.getElementById('eventsList').innerHTML=DATA.events.map(x=>`<div class="event"><div class="event-date"><strong>${x.day}</strong>${x.month}</div><div><h3>${x.title}</h3><p>${x.details}</p></div><div class="event-type">${x.type}</div></div>`).join('');
+ document.getElementById('hofGrid').innerHTML=DATA.hallOfFame.map(x=>`<div class="hof-card ${x.featured?'featured':''}">${x.image?`<img src="${x.image}" alt="">`:''}<span class="tag">${x.tag}</span><h3>${x.title}</h3><p>${x.text}</p></div>`).join('');
+ document.getElementById('announcements').innerHTML=DATA.announcements.map(x=>`<div class="announcement"><b>${x.tag}</b><br>${x.text}</div>`).join('');
+ document.getElementById('newsletters').innerHTML=DATA.newsletters.map(x=>`<div class="newsletter"><div class="cover">${x.month.replace(' ','<br>')}</div><small>${x.issue}</small><h3>${x.title}</h3><p>${x.text}</p><a class="btn" href="${x.pdf}" target="_blank">Read Edition</a></div>`).join('');
+ document.getElementById('riddleTitle').textContent=DATA.riddle.title;
+ document.getElementById('riddleQuestion').innerHTML=DATA.riddle.question.replaceAll('\\n','<br>');
+ document.getElementById('answer').textContent='ANSWER: '+DATA.riddle.answer;
+ document.getElementById('across').textContent=DATA.crossword.cluesAcross;
+ document.getElementById('down').textContent=DATA.crossword.cluesDown;
+ const total=DATA.crossword.answers.length;
+ document.getElementById('crosswordGrid').innerHTML=Array.from({length:64},(_,i)=>{
+   if([3,7,9,11,13,15,22,24,32,37,41,43,47,56].includes(i)) return '<input class="block">';
+   const n=i<total?i:null;
+   return n===null?'<input>':`<input data-answer="${DATA.crossword.answers[n]}" maxlength="1">`;
+ }).join('');
+ const url=DATA.googleFormUrl || 'https://docs.google.com/forms/d/e/1FAIpQLSekGrcl2J5drpdF4tVmD4_ixBrldUaqGu8euyTSRJz_ZMScMA/viewform?usp=publish-editor';
+ if(url && url.startsWith('http')){document.getElementById('formLink').href=url;document.getElementById('formWarning').textContent='Your suggestion will be sent to the school form.'}
+ else{document.getElementById('formLink').href='#';document.getElementById('formWarning').textContent='The Google Form has not been connected yet. Add its link in content.json.';document.getElementById('formLink').onclick=()=>alert('Open content.json and replace PASTE_YOUR_GOOGLE_FORM_LINK_HERE with your Google Form link.');}
 }
+function esc(s){return String(s).replaceAll("'","\\'").replaceAll("\n"," ")}
+function openModal(t,x){document.getElementById('modalTitle').textContent=t;document.getElementById('modalText').textContent=x;document.getElementById('modal').style.display='flex'}
 function closeModal(){document.getElementById('modal').style.display='none'}
-window.addEventListener('click',e=>{if(e.target.id==='modal')closeModal()});
-
-document.querySelectorAll('.grid8 input').forEach(cell=>{
-  cell.addEventListener('input',()=>cell.value=cell.value.toUpperCase());
-});
-
-document.getElementById('suggestionForm').addEventListener('submit',e=>{
-  e.preventDefault();
-  const suggestion = {
-    name: document.getElementById('name').value.trim() || 'Anonymous',
-    category: document.getElementById('type').value || 'Uncategorised',
-    message: document.getElementById('suggestion').value.trim(),
-    date: new Date().toLocaleString()
-  };
-  if (!suggestion.message) return;
-
-  const submissions = JSON.parse(localStorage.getItem('ciaSuggestions') || '[]');
-  submissions.push(suggestion);
-  localStorage.setItem('ciaSuggestions', JSON.stringify(submissions));
-
-  const msg=document.getElementById('formMessage');
-  msg.textContent='✓ Suggestion saved successfully.';
-  msg.style.color='var(--gold2)';
-  e.target.reset();
-});
-
-function getSubmissions(){
-  return JSON.parse(localStorage.getItem('ciaSuggestions') || '[]');
-}
-
-function viewSubmissions(){
-  const submissions = getSubmissions();
-  if (!submissions.length) {
-    openModal('Saved Submissions','There are no saved suggestions yet.');
-    return;
-  }
-  const text = submissions.map((s,i)=>
-    `${i+1}. ${s.date}\nFrom: ${s.name}\nCategory: ${s.category}\n${s.message}`
-  ).join('\n\n--------------------\n\n');
-  openModal('Saved Suggestions', text);
-}
-
-function downloadSubmissions(){
-  const submissions = getSubmissions();
-  if (!submissions.length) {
-    openModal('Export', 'There are no submissions to export yet.');
-    return;
-  }
-  const blob = new Blob([JSON.stringify(submissions,null,2)], {type:'application/json'});
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = 'cia_suggestions.json';
-  a.click();
-  URL.revokeObjectURL(url);
-}
-
-function checkCrossword(){
-  const cells = [...document.querySelectorAll('#crosswordGrid input:not(.block)')];
-  let correct = 0, filled = 0;
-
-  cells.forEach(cell=>{
-    const value = cell.value.trim().toUpperCase();
-    if (value) filled++;
-    if (value === cell.dataset.answer) {
-      cell.style.background = '#d9ead3';
-      cell.style.border = '2px solid #38761d';
-      correct++;
-    } else if (value) {
-      cell.style.background = '#f4cccc';
-      cell.style.border = '2px solid #990000';
-    } else {
-      cell.style.background = '#fff';
-      cell.style.border = '1px solid #555';
-    }
-  });
-
-  const result = document.getElementById('crosswordResult');
-  if (correct === cells.length) {
-    result.textContent = '✓ CORRECT — excellent work. You solved the crossword!';
-    result.style.color = '#38761d';
-  } else {
-    result.textContent = `${correct}/${cells.length} correct. ${filled < cells.length ? 'Some squares are still empty.' : 'Red squares are wrong — try again.'}`;
-    result.style.color = '#741f31';
-  }
-}
-
-function resetCrossword(){
-  document.querySelectorAll('#crosswordGrid input:not(.block)').forEach(cell=>{
-    cell.value='';
-    cell.style.background='#fff';
-    cell.style.border='1px solid #555';
-  });
-  document.getElementById('crosswordResult').textContent='';
-}
+function checkCrossword(){const c=[...document.querySelectorAll('#crosswordGrid input:not(.block)')],answers=c.map(x=>x.dataset.answer).filter(Boolean);let correct=0,filled=0;c.forEach(x=>{let v=x.value.trim().toUpperCase();if(v)filled++;if(x.dataset.answer&&v===x.dataset.answer){x.style.background='#d9ead3';x.style.border='2px solid #38761d';correct++}else if(v){x.style.background='#f4cccc';x.style.border='2px solid #990000'}else{x.style.background='#fff';x.style.border='1px solid #555'}});const r=document.getElementById('crosswordResult');r.textContent=correct===answers.length?'✓ CORRECT — excellent work. You solved the crossword!':`${correct}/${answers.length} correct. ${filled<answers.length?'Some squares are still empty.':'Red squares are wrong — try again.'}`;r.style.color=correct===answers.length?'#38761d':'#741f31'}
+function resetCrossword(){document.querySelectorAll('#crosswordGrid input:not(.block)').forEach(x=>{x.value='';x.style.background='#fff';x.style.border='1px solid #555'});document.getElementById('crosswordResult').textContent=''}
+load().catch(e=>{document.body.innerHTML='<p style="padding:30px;font-family:Arial">Could not load content.json. Make sure it is uploaded beside index.html.</p>'});
 </script>
 </body>
 </html>
