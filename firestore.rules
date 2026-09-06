@@ -1,0 +1,43 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() {
+      return request.auth != null
+        && request.auth.token.email != null
+        && request.auth.token.email_verified == true;
+    }
+
+    function staffMember() {
+      return signedIn()
+        && request.auth.token.email in [
+          'PASTE_STAFF_GMAIL_ADDRESS_HERE'
+        ];
+    }
+
+    match /suggestions/{suggestionId} {
+      // Students may submit only their own, bounded suggestion. They cannot
+      // read any suggestion—including their own—after it is submitted.
+      allow create: if signedIn()
+        && request.resource.data.keys().hasOnly([
+          'topic', 'message', 'authorUid', 'authorName', 'authorEmail', 'createdAt'
+        ])
+        && request.resource.data.keys().hasAll([
+          'topic', 'message', 'authorUid', 'authorName', 'authorEmail', 'createdAt'
+        ])
+        && request.resource.data.authorUid == request.auth.uid
+        && request.resource.data.authorEmail == request.auth.token.email
+        && request.resource.data.topic is string
+        && request.resource.data.topic.size() > 0
+        && request.resource.data.topic.size() <= 60
+        && request.resource.data.message is string
+        && request.resource.data.message.size() > 0
+        && request.resource.data.message.size() <= 1200
+        && request.resource.data.authorName is string
+        && request.resource.data.authorName.size() <= 100;
+
+      // Only named staff Gmail accounts can open, edit, or remove submissions.
+      allow read, update, delete: if staffMember();
+    }
+  }
+}

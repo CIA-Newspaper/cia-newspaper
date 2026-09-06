@@ -86,6 +86,5 @@
       {"number": 18, "direction": "across", "answer": "PUZZLE", "row": 13, "col": 6, "clue": "A problem designed to test your thinking."},
       {"number": 19, "direction": "across", "answer": "SPORTS", "row": 14, "col": 8, "clue": "Competitive physical activities and games."}
     ]
-  },
-  "googleFormUrl": "https://docs.google.com/forms/d/e/1FAIpQLSekGrcl2J5drpdF4tVmD4_ixBrldUaqGu8euyTSRJz_ZMScMA/viewform?usp=publish-editor"
+  }
 }

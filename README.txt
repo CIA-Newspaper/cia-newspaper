@@ -35,3 +35,9 @@ Entries in content.json use:
 - clue: the displayed clue
 
 The Content Desk validates duplicate clue numbers, out-of-bounds entries, and conflicting letters before it downloads content.json. The public site also shows a clear error instead of a broken grid if a crossword is invalid.
+
+GOOGLE ACCOUNTS AND SUGGESTIONS
+The newspaper now has a built-in Google account sign-in, personalised greeting,
+suggestion form, and private staff inbox at inbox.html. It requires a Firebase
+project before it can collect real submissions. Follow FIREBASE_SETUP.md before
+publishing the account features.

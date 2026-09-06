@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>The Intelligence — Suggestion Inbox</title>
+<style>
+:root{--ink:#211f20;--paper:#f3ecdd;--paper2:#fffaf0;--gold:#c79a22;--maroon:#741f31;--line:#938b7e;--good:#22643c;--bad:#902838}*{box-sizing:border-box}body{min-height:100vh;margin:0;background:radial-gradient(rgba(40,30,20,.045) 1px,transparent 1px) 0 0/5px 5px,var(--paper);color:var(--ink);font-family:"Palatino Linotype",Palatino,Georgia,serif}.shell{max-width:1080px;min-height:100vh;margin:auto;background:var(--paper2);box-shadow:0 0 35px rgba(0,0,0,.15)}.top{padding:9px 28px;background:var(--ink);color:#fff;font:700 10px "Segoe UI",Arial,sans-serif;letter-spacing:2px;text-align:center}.header{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:25px 36px;border-bottom:4px double var(--ink)}.header p{margin:0;color:var(--maroon);font:700 10px "Segoe UI",Arial,sans-serif;letter-spacing:1.4px;text-transform:uppercase}.header h1{margin:4px 0 0;font-size:clamp(30px,5vw,52px);line-height:.95;letter-spacing:-2px}.controls{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}.button{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:9px 13px;border:1px solid rgba(0,0,0,.3);border-bottom:4px solid rgba(0,0,0,.35);border-radius:3px;background:var(--maroon);color:#fff;cursor:pointer;font:700 10px "Segoe UI",Arial,sans-serif;letter-spacing:.7px;text-decoration:none;text-transform:uppercase}.button:hover,.button:focus-visible{outline:2px solid var(--gold);outline-offset:2px;transform:translateY(-1px)}.button:active{transform:translateY(2px);border-bottom-width:1px}.button.gold{background:var(--gold);color:var(--ink);border-bottom-color:#8c6612}.button.dark{background:var(--ink)}main{padding:27px 36px 46px}.notice{margin-bottom:18px;padding:13px 15px;border:1px solid var(--line);border-left:5px solid var(--gold);background:#f7efdf;font:14px/1.45 "Segoe UI",Arial,sans-serif}.notice.bad{border-left-color:var(--bad);background:#f7dfe1}.notice.good{border-left-color:var(--good);background:#e2f0e1}.summary{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin:0 0 14px;padding-top:8px;border-top:5px solid var(--ink)}.summary h2{margin:0;font-size:25px}.summary p{margin:0;color:var(--maroon);font:700 10px "Segoe UI",Arial,sans-serif;letter-spacing:.8px;text-transform:uppercase}.empty{padding:40px 20px;border:1px dashed var(--line);background:#f7efdf;text-align:center;font:16px/1.4 "Segoe UI",Arial,sans-serif}.submissions{display:grid;gap:12px}.submission{padding:18px;border:1px solid var(--line);border-top:4px solid var(--ink);background:#fffdf7}.submission-head{display:flex;align-items:flex-start;justify-content:space-between;gap:15px;margin-bottom:10px}.tag{display:inline-block;padding:3px 7px;background:var(--gold);font:800 9px "Segoe UI",Arial,sans-serif;letter-spacing:.8px;text-transform:uppercase}.submission time{color:#625d55;font:11px "Segoe UI",Arial,sans-serif;text-align:right}.message{margin:0 0 12px;white-space:pre-wrap;font-size:17px;line-height:1.45}.author{margin:0;color:#625d55;font:12px "Segoe UI",Arial,sans-serif}.author strong{color:var(--maroon)}footer{padding:22px 36px;border-top:5px solid var(--gold);background:var(--ink);color:#ddd;font:11px "Segoe UI",Arial,sans-serif;letter-spacing:.6px}@media(max-width:650px){.header,main,footer{padding-right:20px;padding-left:20px}.header{align-items:flex-start;flex-direction:column}.controls{justify-content:flex-start}.submission-head{flex-direction:column}.submission time{text-align:left}}
+</style>
+</head>
+<body>
+<div class="shell">
+<div class="top">CIA // STAFF AREA // CONFIDENTIAL</div>
+<header class="header"><div><p>The Intelligence</p><h1>Suggestion Inbox</h1></div><div class="controls"><a class="button dark" href="index.html">Back to newspaper</a><button id="signInButton" class="button gold" type="button">Continue with Google</button><button id="signOutButton" class="button" type="button" hidden>Sign out</button></div></header>
+<main><div id="notice" class="notice">Checking account access…</div><section id="inbox" hidden><div class="summary"><h2>Student submissions</h2><p id="submissionCount"></p></div><div id="submissions" class="submissions"></div></section></main>
+<footer>THE INTELLIGENCE • Staff suggestion desk</footer>
+</div>
+<script type="module">
+import { firebaseConfigured, getSuggestions, isAdmin, observeUser, signInWithGoogle, signOutUser } from "./firebase.js";
+
+const notice=document.getElementById("notice"),inbox=document.getElementById("inbox"),list=document.getElementById("submissions"),count=document.getElementById("submissionCount"),signIn=document.getElementById("signInButton"),signOut=document.getElementById("signOutButton");
+const setNotice=(text,kind="")=>{notice.textContent=text;notice.className="notice "+kind};
+const displayDate=value=>value?.toDate?value.toDate().toLocaleString("en-GB",{dateStyle:"medium",timeStyle:"short"}):"Just received";
+function renderSuggestions(items){
+ list.replaceChildren();count.textContent=items.length+" "+(items.length===1?"submission":"submissions");
+ if(!items.length){list.append(Object.assign(document.createElement("p"),{className:"empty",textContent:"No suggestions have been received yet."}));return}
+ items.forEach(item=>{const article=document.createElement("article"),head=document.createElement("div"),tag=document.createElement("span"),time=document.createElement("time"),message=document.createElement("p"),author=document.createElement("p"),name=document.createElement("strong");article.className="submission";head.className="submission-head";tag.className="tag";tag.textContent=item.topic||"Suggestion";time.textContent=displayDate(item.createdAt);message.className="message";message.textContent=item.message||"";author.className="author";author.append("From ",name,document.createTextNode(" • "+(item.authorEmail||"")));name.textContent=item.authorName||"Student";head.append(tag,time);article.append(head,message,author);list.append(article)})
+}
+async function load(user){setNotice("Loading protected submissions…");try{const items=await getSuggestions();renderSuggestions(items);notice.hidden=true;inbox.hidden=false}catch(error){inbox.hidden=true;setNotice("The inbox could not be loaded. Confirm that the staff email and Firestore rules match.","bad");console.error(error)}}
+signIn.onclick=async()=>{try{await signInWithGoogle()}catch(error){setNotice("Google sign-in did not complete. Please try again.","bad");console.error(error)}};
+signOut.onclick=()=>signOutUser();
+if(!firebaseConfigured){setNotice("Firebase has not been configured. Follow FIREBASE_SETUP.md before using the inbox.","bad")}else observeUser(user=>{signIn.hidden=Boolean(user);signOut.hidden=!user;if(!user){inbox.hidden=true;setNotice("Sign in with the staff Google account to open the protected inbox.");return}if(!isAdmin(user)){inbox.hidden=true;setNotice("This Google account is not on the staff inbox list.","bad");return}load(user)});
+</script>
+</body>
+</html>
