@@ -41,14 +41,23 @@
       "day": "18",
       "month": "SEP",
       "title": "Student Council Elections",
+<<<<<<< HEAD
       "details": "All Students • Main Hall • Lunch",
+=======
+      "details": "All Years • Main Hall • Lunch",
+>>>>>>> 0d02aefe8bda2be837cf14dc732468671f8a0c88
       "type": "STUDENT VOICE"
     },
     {
       "day": "25",
       "month": "SEP",
+<<<<<<< HEAD
       "title": "Science Fair",
       "details": "Science Block • 2:00 PM",
+=======
+      "title": "Year 8 Science Fair",
+      "details": "Year 8 • Science Block • 2:00 PM",
+>>>>>>> 0d02aefe8bda2be837cf14dc732468671f8a0c88
       "type": "ACADEMIC"
     },
     {
@@ -61,7 +70,11 @@
   ],
   "hallOfFame": [
     {
+<<<<<<< HEAD
       "tag": "SECONDARY SPOTLIGHT",
+=======
+      "tag": "YEAR 9 • SPOTLIGHT",
+>>>>>>> 0d02aefe8bda2be837cf14dc732468671f8a0c88
       "title": "Science Investigation of the Month",
       "text": "An outstanding investigation into renewable energy, selected for clear reasoning, presentation and originality.",
       "image": "assets/campus_wide.png",
@@ -70,7 +83,11 @@
     {
       "tag": "CREATIVE SHOWCASE",
       "title": "Artwork of the Week",
+<<<<<<< HEAD
       "text": "“The City at Night” — selected by the Art Department.",
+=======
+      "text": "\"The City at Night\" - selected by the Art Department.",
+>>>>>>> 0d02aefe8bda2be837cf14dc732468671f8a0c88
       "image": "",
       "featured": false
     },
@@ -123,6 +140,7 @@
       "pdf": "past_editions/march_2026.pdf"
     }
   ],
+<<<<<<< HEAD
   "riddle": {
     "title": "Riddle of the Week",
     "question": "I tell a story but never speak.\nI have pages but I am not a book.\nWhat am I?",
@@ -142,21 +160,54 @@
       "answer": "HEADLINE"
     }
   },
+=======
+  "riddles": [
+    {
+      "title": "Riddle of the Week",
+      "question": "I speak without a mouth and hear without ears. I have no body, but I come alive with wind. What am I?",
+      "answer": "AN ECHO"
+    },
+    {
+      "title": "Challenge Riddle",
+      "question": "The more you take, the more you leave behind. What am I?",
+      "answer": "FOOTSTEPS"
+    },
+    {
+      "title": "Brain Teaser",
+      "question": "I have cities but no houses, forests but no trees, and water but no fish. What am I?",
+      "answer": "A MAP"
+    },
+    {
+      "title": "Lateral Puzzle",
+      "question": "What has a neck but no head?",
+      "answer": "A BOTTLE"
+    }
+  ],
+>>>>>>> 0d02aefe8bda2be837cf14dc732468671f8a0c88
   "crossword": {
     "rows": 17,
     "cols": 17,
     "entries": [
       {
         "number": 1,
+<<<<<<< HEAD
         "direction": "down",
         "answer": "WRITER",
         "row": 0,
         "col": 1,
         "clue": "A person who creates articles, stories or poems."
+=======
+        "direction": "across",
+        "answer": "INVESTIGATION",
+        "row": 0,
+        "col": 0,
+        "clue": "Thorough examination or inquiry into something"
+>>>>>>> 0d02aefe8bda2be837cf14dc732468671f8a0c88
       },
       {
         "number": 2,
         "direction": "down",
+<<<<<<< HEAD
         "answer": "FEATURE",
         "row": 0,
         "col": 16,
@@ -177,34 +228,78 @@
         "row": 1,
         "col": 10,
         "clue": "The place where a play is performed."
+=======
+        "answer": "NONFICTION",
+        "row": 0,
+        "col": 5,
+        "clue": "True stories and factual accounts"
+      },
+      {
+        "number": 3,
+        "direction": "down",
+        "answer": "REPORTER",
+        "row": 0,
+        "col": 8,
+        "clue": "Journalist who gathers and reports the news"
+      },
+      {
+        "number": 4,
+        "direction": "down",
+        "answer": "INSPIRE",
+        "row": 3,
+        "col": 3,
+        "clue": "To motivate or fill with enthusiasm"
+>>>>>>> 0d02aefe8bda2be837cf14dc732468671f8a0c88
       },
       {
         "number": 5,
         "direction": "down",
+<<<<<<< HEAD
         "answer": "STUDENT",
         "row": 3,
         "col": 4,
         "clue": "A person who attends school to learn."
+=======
+        "answer": "PUBLISH",
+        "row": 4,
+        "col": 1,
+        "clue": "To release information for public distribution"
+>>>>>>> 0d02aefe8bda2be837cf14dc732468671f8a0c88
       },
       {
         "number": 6,
         "direction": "across",
+<<<<<<< HEAD
         "answer": "OPINION",
         "row": 3,
         "col": 6,
         "clue": "A personal view or judgement."
+=======
+        "answer": "RESEARCH",
+        "row": 5,
+        "col": 0,
+        "clue": "Systematic investigation or study of facts"
+>>>>>>> 0d02aefe8bda2be837cf14dc732468671f8a0c88
       },
       {
         "number": 7,
         "direction": "down",
+<<<<<<< HEAD
         "answer": "PUBLISH",
         "row": 3,
         "col": 7,
         "clue": "To prepare writing so it can be read by others."
+=======
+        "answer": "ARCHIVE",
+        "row": 5,
+        "col": 7,
+        "clue": "Collection of historical records or documents"
+>>>>>>> 0d02aefe8bda2be837cf14dc732468671f8a0c88
       },
       {
         "number": 8,
         "direction": "across",
+<<<<<<< HEAD
         "answer": "DEBATE",
         "row": 4,
         "col": 0,
@@ -337,6 +432,12 @@
         "row": 16,
         "col": 10,
         "clue": "The study of the natural world through observation and experiment."
+=======
+        "answer": "EVIDENCE",
+        "row": 10,
+        "col": 0,
+        "clue": "Facts supporting an investigation or claim"
+>>>>>>> 0d02aefe8bda2be837cf14dc732468671f8a0c88
       }
     ]
   },
