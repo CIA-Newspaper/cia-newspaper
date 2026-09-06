@@ -39,5 +39,5 @@ The Content Desk validates duplicate clue numbers, out-of-bounds entries, and co
 GOOGLE ACCOUNTS AND SUGGESTIONS
 The newspaper now has a built-in Google account sign-in, personalised greeting,
 suggestion form, and private staff inbox at inbox.html. It requires a Firebase
-project before it can collect real submissions. Follow FIREBASE_SETUP.md before
-publishing the account features.
+Console setup before it can collect real submissions. Follow FIREBASE_SETUP.md
+before publishing the account features.
