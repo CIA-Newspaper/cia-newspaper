@@ -1,36 +1,27 @@
-THE INTELLIGENCE — CIA STUDENT NEWSPAPER
-FINAL GITHUB PAGES PACKAGE
+THE INTELLIGENCE — CIA Student Newspaper
 
-IMPORTANT: THIS ZIP IS ALREADY FLATTENED.
-Upload the FILES INSIDE this folder directly into the ROOT of your GitHub Pages repository.
-Do NOT upload the outer folder itself as a subfolder.
+GitHub Pages structure:
+  index.html
+  content.json
+  admin.html
+  assets/
+  past_editions/
 
-Your repository root should look like:
+IMPORTANT:
+This version has the current newspaper content embedded inside index.html as a fallback.
+That means the site will still display even if the browser cannot fetch content.json.
+When hosted correctly, it will load the latest content.json first.
 
-index.html
-content.json
-admin.html
-assets/
-past_editions/
+If GitHub Pages is used, set Settings > Pages > Deploy from a branch > main > /(root).
+After uploading, allow a few minutes for the Pages site to update.
 
-DEPLOY
-1. Open your existing GitHub Pages repository.
-2. Upload/replace index.html, content.json and admin.html in the repository ROOT.
-3. Upload/replace the assets/ and past_editions/ folders.
-4. Commit the changes.
-5. Refresh the GitHub Pages site after the commit finishes deploying.
+Admin workflow:
+  1. Open admin.html
+  2. Edit content
+  3. Download content.json
+  4. Replace the repository's content.json
+  5. Commit the change
 
-The website reads content.json from the same directory as index.html.
-
-UPDATING CONTENT
-1. Open admin.html on the deployed site.
-2. Edit the newspaper content.
-3. Download the new content.json.
-4. Replace the old content.json in the repository ROOT and commit it.
-
-SUGGESTION BOX
-The Suggestion Box uses the Google Form configured in content.json.
-
-CREDITS
-Website & concept: Rushil Chauhan
-CIA Student Press • Years 7–9
+Suggestion form:
+The current Google Form link is stored in content.json and also included as the fallback
+site data in index.html.
