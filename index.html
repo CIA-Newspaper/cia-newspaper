@@ -26,6 +26,14 @@ h1,.headline,.section-title h2,.sidebar h2,.card h3,.newsletter h3,.hof-card h3,
 .footer-motto{color:var(--gold2);font-weight:700;letter-spacing:1.5px;text-align:center}
 .footer-credit{color:#d7d0c5;text-align:right}.footer-credit strong{display:inline;color:var(--gold2);font-size:inherit}
 @media(max-width:850px){.masthead:after{right:20px;left:20px}.footer{grid-template-columns:1fr;gap:10px}.footer-motto,.footer-credit{text-align:left}}
+.mini-puzzles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-bottom:18px}
+.puzzle-card{position:relative;padding:20px;border:1px solid var(--line);border-top:5px solid var(--gold);background:var(--panel)}
+.puzzle-card:before{position:absolute;top:9px;right:11px;color:rgba(116,31,49,.35);content:"PUZZLE DESK";font:800 8px Arial,sans-serif;letter-spacing:1px}
+.puzzle-card h3{margin:0 24px 7px 0;font:700 23px "Bodoni MT","Palatino Linotype",Georgia,serif}
+.puzzle-card p{margin:0 0 12px;line-height:1.42}.puzzle-prompt{display:block;margin:12px 0;padding:10px 12px;border-left:4px solid var(--maroon);background:#fffaf0;font-size:18px;font-weight:bold;letter-spacing:.08em}
+.puzzle-hint{color:#625d55;font:12px/1.4 Arial,sans-serif}.puzzle-form{display:flex;gap:8px;align-items:stretch;margin-top:12px}.puzzle-form input{min-width:0;flex:1;padding:9px 10px;border:1px solid #81786b;background:#fff;font:700 14px "Segoe UI",Arial,sans-serif;letter-spacing:.05em;text-transform:uppercase}
+.puzzle-feedback{min-height:1.3em;margin:9px 0 0;font:700 12px Arial,sans-serif}.puzzle-feedback.good{color:var(--good)}.puzzle-feedback.bad{color:var(--bad)}
+@media(max-width:850px){.mini-puzzles{grid-template-columns:1fr}}@media(max-width:480px){.puzzle-form{flex-direction:column}}
 </style>
 </head>
 <body>
@@ -41,7 +49,7 @@ h1,.headline,.section-title h2,.sidebar h2,.card h3,.newsletter h3,.hof-card h3,
 <section id="hall" class="section"><div class="section-title"><h2>Hall of fame</h2><p>Outstanding evidence</p></div><div id="hallGrid" class="hall"></div></section>
 <section id="briefing" class="section"><div class="section-title"><h2>Morning briefing</h2><p>Declassified announcements</p></div><div id="announcements" class="announcements"></div></section>
 <section id="archive" class="section"><div class="section-title"><h2>The archive</h2><p>Previous editions</p></div><div id="newsletters" class="newsletters"></div></section>
-<section id="puzzles" class="section"><div class="section-title"><h2>Puzzles &amp; ciphers</h2><p>For your next mission</p></div><div class="puzzles"><article class="riddle"><h3 id="riddleTitle"></h3><p id="riddleQuestion" class="riddle-question"></p><button id="answerButton" class="button gold" type="button" aria-expanded="false">Decrypt answer</button><p id="riddleAnswer" class="riddle-answer" aria-live="polite" hidden></p></article><section class="crossword" aria-labelledby="crosswordHeading"><h3 id="crosswordHeading">Subject crossword</h3><p class="crossword-intro">Use the clues to fill the grid. Arrow keys move between squares.</p><div id="crosswordContent"></div></section></div></section>
+<section id="puzzles" class="section"><div class="section-title"><h2>Puzzles &amp; ciphers</h2><p>For your next mission</p></div><div id="miniPuzzles" class="mini-puzzles"></div><div class="puzzles"><article class="riddle"><h3 id="riddleTitle"></h3><p id="riddleQuestion" class="riddle-question"></p><button id="answerButton" class="button gold" type="button" aria-controls="riddleAnswer" aria-expanded="false">Reveal answer</button><p id="riddleAnswer" class="riddle-answer" aria-live="polite" hidden></p></article><section class="crossword" aria-labelledby="crosswordHeading"><h3 id="crosswordHeading">Press Room Crossword</h3><p class="crossword-intro">Click a starting square to choose a clue direction. Then type to move through the selected word.</p><div id="crosswordContent"></div></section></div></section>
 <section id="suggest" class="section"><div class="suggestion"><div><h2>Digital suggestion box</h2><p>Have an idea for the newspaper, a club, an event or student life? Send it directly through the school’s Google Form.</p><div class="stamp">Student voice</div></div><div class="suggestion-action"><p id="formMessage"></p><a id="formLink" class="button gold" target="_blank" rel="noopener">Open suggestion form</a></div></div></section>
 </main>
 <footer class="footer"><div class="footer-brand"><strong>THE INTELLIGENCE</strong><span>CIA Student Press</span></div><p class="footer-motto">READ. REPORT. PARTICIPATE.</p><p class="footer-credit">Website and concept by <strong>Rushil Chauhan</strong></p></footer>
@@ -123,7 +131,35 @@ function renderCrossword(raw){
  actions.append(check,clear);root.append(actions,result);
  const clues=make('div','clues');['across','down'].forEach(direction=>{const col=make('section','clue-col');col.append(make('h4','',direction));const list=make('ol');model.entries.filter(entry=>entry.direction===direction).forEach(entry=>{const li=make('li','',entry.clue);li.value=entry.number;list.append(li)});col.append(list);clues.append(col)});root.append(clues)
 }
-function render(data){const site=data.site||{};document.title=site.name?site.name+' — Student Newspaper':'The Intelligence';$('#school').textContent=site.school||'';$('#siteName').textContent=site.name||'THE INTELLIGENCE';$('#subtitle').textContent=site.subtitle||'';showEdition(site.edition||'');$('#today').textContent=new Intl.DateTimeFormat('en-GB',{weekday:'long',day:'numeric',month:'long',year:'numeric'}).format(new Date());$('#alert').textContent=site.alert||'';setImage($('#heroImage'),site.heroImage,site.heroTitle||'Featured story');$('#heroTitle').textContent=site.heroTitle||'';$('#heroText').textContent=site.heroText||'';renderClubs(Array.isArray(data.clubs)?data.clubs:[]);renderEvents(Array.isArray(data.events)?data.events:[]);renderHall(Array.isArray(data.hallOfFame)?data.hallOfFame:[]);renderNotes(Array.isArray(data.announcements)?data.announcements:[]);renderNews(Array.isArray(data.newsletters)?data.newsletters:[]);$('#riddleTitle').textContent=data.riddle?.title||'Riddle of the week';$('#riddleQuestion').textContent=data.riddle?.question||'';const riddle=$('#riddleAnswer'),button=$('#answerButton');riddle.textContent='Answer: '+(data.riddle?.answer||'Not set yet.');button.onclick=()=>{riddle.hidden=!riddle.hidden;button.textContent=riddle.hidden?'Decrypt answer':'Hide answer';button.setAttribute('aria-expanded',String(!riddle.hidden))};renderCrossword(data.crossword||{});const url=clean(data.googleFormUrl),link=$('#formLink');if(/^https?:\/\//i.test(url)){link.href=url;$('#formMessage').textContent='Your suggestion will be sent to the school form.'}else{link.href='#';link.setAttribute('aria-disabled','true');link.onclick=e=>e.preventDefault();$('#formMessage').textContent='The suggestion form is being prepared.'}$('#loading').hidden=true;$('#page').hidden=false}
+const DEFAULT_PUZZLES={
+ scramble:{title:'Word mix',prompt:'R E P O R T E R',hint:'Unscramble this newspaper role.',answer:'REPORTER'},
+ cipher:{title:'Cipher sprint',prompt:'K H D G O L Q H',hint:'Caesar shift: move every letter back three places.',answer:'HEADLINE'}
+};
+function renderMiniPuzzles(raw){
+ const puzzles={...DEFAULT_PUZZLES,...(raw||{})},root=$('#miniPuzzles');root.replaceChildren();
+ Object.entries(puzzles).forEach(([key,puzzle])=>{
+  const card=make('article','puzzle-card'),title=make('h3','',puzzle.title||'Quick puzzle'),description=make('p','puzzle-hint',puzzle.hint||'Work out the answer.'),prompt=make('span','puzzle-prompt',puzzle.prompt||'');
+  const form=make('div','puzzle-form'),input=make('input'),button=make('button','button gold','Check'),feedback=make('p','puzzle-feedback');
+  input.type='text';input.autocomplete='off';input.spellcheck=false;input.placeholder='Your answer';input.setAttribute('aria-label',(puzzle.title||'Puzzle')+' answer');
+  const check=()=>{const correct=letters(input.value)===letters(puzzle.answer);feedback.className='puzzle-feedback '+(correct?'good':'bad');feedback.textContent=correct?'Correct — nicely decoded!':'Not quite. Try the clue again.';input.setAttribute('aria-invalid',String(!correct))};
+  button.type='button';button.onclick=check;input.onkeydown=event=>{if(event.key==='Enter'){event.preventDefault();check()}};
+  form.append(input,button);card.append(title,prompt,description,form,feedback);root.append(card);
+ })
+}
+function render(data){
+ const site=data.site||{};
+ document.title=site.name?site.name+' — Student Newspaper':'The Intelligence';
+ $('#school').textContent=site.school||'';$('#siteName').textContent=site.name||'THE INTELLIGENCE';$('#subtitle').textContent=site.subtitle||'';showEdition(site.edition||'');
+ $('#today').textContent=new Intl.DateTimeFormat('en-GB',{weekday:'long',day:'numeric',month:'long',year:'numeric'}).format(new Date());
+ $('#alert').textContent=site.alert||'';setImage($('#heroImage'),site.heroImage,site.heroTitle||'Featured story');$('#heroTitle').textContent=site.heroTitle||'';$('#heroText').textContent=site.heroText||'';
+ renderClubs(Array.isArray(data.clubs)?data.clubs:[]);renderEvents(Array.isArray(data.events)?data.events:[]);renderHall(Array.isArray(data.hallOfFame)?data.hallOfFame:[]);renderNotes(Array.isArray(data.announcements)?data.announcements:[]);renderNews(Array.isArray(data.newsletters)?data.newsletters:[]);
+ $('#riddleTitle').textContent=data.riddle?.title||'Riddle of the week';$('#riddleQuestion').textContent=data.riddle?.question||'';
+ const riddle=$('#riddleAnswer'),button=$('#answerButton');riddle.textContent='Answer: '+(data.riddle?.answer||'Not set yet.');riddle.hidden=true;button.textContent='Reveal answer';button.setAttribute('aria-expanded','false');
+ button.onclick=()=>{const isHidden=riddle.hidden;riddle.hidden=!isHidden;button.textContent=isHidden?'Hide answer':'Reveal answer';button.setAttribute('aria-expanded',String(isHidden))};
+ renderMiniPuzzles(data.puzzleExtras);renderCrossword(data.crossword||{});
+ const url=clean(data.googleFormUrl),link=$('#formLink');if(/^https?:\/\//i.test(url)){link.href=url;link.removeAttribute('aria-disabled');$('#formMessage').textContent='Your suggestion will be sent to the school form.'}else{link.href='#';link.setAttribute('aria-disabled','true');link.onclick=event=>event.preventDefault();$('#formMessage').textContent='The suggestion form is being prepared.'}
+ $('#loading').hidden=true;$('#page').hidden=false
+}
 function setupNav(){const links=[...document.querySelectorAll('.nav a')];links.forEach(link=>link.onclick=()=>links.forEach(x=>x.classList.toggle('active',x===link)));const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting)links.forEach(link=>link.classList.toggle('active',link.getAttribute('href')==='#'+entry.target.id))}),{rootMargin:'-22% 0px -62% 0px'});links.forEach(link=>{const section=$(link.getAttribute('href'));if(section)observer.observe(section)})}
 $('.dialog-close').onclick=()=>$('#storyDialog').close();$('#storyDialog').onclick=e=>{if(e.target===$('#storyDialog'))$('#storyDialog').close()};setupNav();fetch('content.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json()}).then(render).catch(error=>{const box=make('section','load-error');box.append(make('h2','','Edition unavailable'),make('p','','We could not load content.json ('+error.message+'). Open the published GitHub Pages site or serve this folder through a local web server.'));$('#loading').replaceWith(box);console.error(error)});
 </script>
