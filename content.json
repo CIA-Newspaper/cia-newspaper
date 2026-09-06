@@ -1,7 +1,7 @@
 {
   "site": {
     "name": "THE INTELLIGENCE",
-    "school": "Cambridge International Academy",
+    "school": "INFORM • INVESTIGATE • INSPIRE",
     "subtitle": "The official student newspaper for Years 7–9",
     "edition": "VOL. 01 • ISSUE 01 • SEPTEMBER 2026",
     "heroTitle": "A NEW YEAR. A NEW OPERATION.",
@@ -176,8 +176,28 @@
       "A",
       "L"
     ],
-    "cluesAcross": "basic unit of life • three-sided shape • frozen water • person in a story",
-    "cluesDown": "ruler of a kingdom • force pulling objects down • number divisible by two • large body of salt water"
+    "cluesAcross": [
+      "Basic unit of life.",
+      "Three-sided shape.",
+      "Frozen water.",
+      "Person in a story."
+    ],
+    "cluesDown": [
+      "Ruler of a kingdom.",
+      "Force pulling objects down.",
+      "Number divisible by two.",
+      "Large body of salt water."
+    ],
+    "numbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ]
   },
   "googleFormUrl": "https://docs.google.com/forms/d/e/1FAIpQLSekGrcl2J5drpdF4tVmD4_ixBrldUaqGu8euyTSRJz_ZMScMA/viewform?usp=publish-editor"
 }
