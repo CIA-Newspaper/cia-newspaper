@@ -11,7 +11,7 @@
 </head>
 <body>
 <div class="wrap">
-<header class="mast"><div class="mast-top">CIA // Student Information Network // Years 7–9</div><h1>THE INTELLIGENCE — CONTENT DESK</h1><p>Edit the newspaper without touching the main HTML.</p></header>
+<header class="mast"><div class="mast-top">CIA // Student Information Network</div><h1>THE INTELLIGENCE — CONTENT DESK</h1><p>Edit the newspaper without touching the main HTML.</p></header>
 <div class="toolbar">
 <button class="gold" onclick="downloadContent()">Download content.json</button>
 <button onclick="saveDraft()">Save Draft</button>
@@ -47,6 +47,10 @@ DEFAULT_DATA.crossword={rows:11,cols:9,entries:[
  {number:7,direction:'down',answer:'CELL',row:5,col:7,clue:'Science: The basic unit of life.'},
  {number:8,direction:'across',answer:'NOVEL',row:10,col:0,clue:'English: A long fictional book.'}
 ]};
+DEFAULT_DATA.site.subtitle='The official student newspaper';
+DEFAULT_DATA.site.heroText='Welcome to The Intelligence — a student newspaper designed to keep the whole school informed, involved and curious about what is happening around campus.';
+DEFAULT_DATA.events[0].details='All Secondary • Sports Field • 3:30 PM';
+DEFAULT_DATA.events[3].details='All Secondary • Main Hall • Lunch';
 let d=structuredClone(DEFAULT_DATA);
 function normaliseData(source){
  const base=structuredClone(DEFAULT_DATA), incoming=source&&typeof source==='object'?source:{};

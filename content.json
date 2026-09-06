@@ -2,10 +2,10 @@
   "site": {
     "name": "THE INTELLIGENCE",
     "school": "INFORM \u2022 INVESTIGATE \u2022 INSPIRE",
-    "subtitle": "The official student newspaper for Years 7\u20139",
+    "subtitle": "The official student newspaper",
     "edition": "VOL. 01 \u2022 ISSUE 01 \u2022 SEPTEMBER 2026",
     "heroTitle": "A NEW YEAR. A NEW OPERATION.",
-    "heroText": "Welcome to The Intelligence \u2014 a student newspaper designed to keep Years 7\u20139 informed, involved and curious about what is happening around campus.",
+    "heroText": "Welcome to The Intelligence \u2014 a student newspaper designed to keep the whole school informed, involved and curious about what is happening around campus.",
     "heroImage": "assets/campus.jpg",
     "alert": "BREAKING: STUDENT LIFE IS NOW OFFICIALLY UNDER INVESTIGATION."
   },
@@ -34,7 +34,7 @@
       "day": "12",
       "month": "SEP",
       "title": "Inter-House Football",
-      "details": "Years 7\u20139 \u2022 Sports Field \u2022 3:30 PM",
+      "details": "All Secondary \u2022 Sports Field \u2022 3:30 PM",
       "type": "SPORT"
     },
     {
@@ -55,7 +55,7 @@
       "day": "30",
       "month": "SEP",
       "title": "Clubs Showcase",
-      "details": "Years 7\u20139 \u2022 Main Hall \u2022 Lunch",
+      "details": "All Secondary \u2022 Main Hall \u2022 Lunch",
       "type": "CLUBS"
     }
   ],
