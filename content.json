@@ -70,7 +70,7 @@
     {
       "tag": "YEAR 7",
       "title": "Artwork of the Week",
-      "text": ""The City at Night" — selected by the Art Department.",
+      "text": "\"The City at Night\" - selected by the Art Department.",
       "image": "",
       "featured": false
     },
@@ -147,7 +147,7 @@
   ],
   "crossword": {
     "rows": 11,
-    "cols": 11,
+    "cols": 9,
     "entries": [
       {
         "number": 1,
@@ -155,79 +155,63 @@
         "answer": "INVESTIGATION",
         "row": 0,
         "col": 0,
-        "clue": "Thorough examination or inquiry (13)"
-      },
-      {
-        "number": 1,
-        "direction": "down",
-        "answer": "INSPIRE",
-        "row": 0,
-        "col": 0,
-        "clue": "To motivate or fill with enthusiasm (7)"
+        "clue": "Thorough examination or inquiry into something"
       },
       {
         "number": 2,
         "direction": "down",
         "answer": "NONFICTION",
         "row": 0,
-        "col": 12,
-        "clue": "True stories and factual accounts (10)"
+        "col": 5,
+        "clue": "True stories and factual accounts"
       },
       {
         "number": 3,
-        "direction": "across",
+        "direction": "down",
         "answer": "REPORTER",
-        "row": 2,
-        "col": 0,
-        "clue": "Journalist who gathers news (8)"
+        "row": 0,
+        "col": 8,
+        "clue": "Journalist who gathers and reports the news"
       },
       {
         "number": 4,
         "direction": "down",
-        "answer": "PUBLISH",
-        "row": 2,
+        "answer": "INSPIRE",
+        "row": 3,
         "col": 3,
-        "clue": "To release for public distribution (7)"
+        "clue": "To motivate or fill with enthusiasm"
       },
       {
         "number": 5,
-        "direction": "across",
-        "answer": "DOCUMENT",
+        "direction": "down",
+        "answer": "PUBLISH",
         "row": 4,
-        "col": 0,
-        "clue": "Official written record (8)"
+        "col": 1,
+        "clue": "To release information for public distribution"
       },
       {
         "number": 6,
-        "direction": "down",
+        "direction": "across",
         "answer": "RESEARCH",
         "row": 5,
-        "col": 8,
-        "clue": "Systematic investigation (8)"
+        "col": 0,
+        "clue": "Systematic investigation or study of facts"
       },
       {
         "number": 7,
-        "direction": "across",
+        "direction": "down",
         "answer": "ARCHIVE",
-        "row": 6,
-        "col": 0,
-        "clue": "Collection of historical records (7)"
+        "row": 5,
+        "col": 7,
+        "clue": "Collection of historical records or documents"
       },
       {
         "number": 8,
-        "direction": "down",
-        "answer": "EVIDENCE",
-        "row": 6,
-        "col": 5,
-        "clue": "Facts supporting a claim (8)"
-      },
-      {
-        "number": 9,
         "direction": "across",
-        "answer": "ANALYST",
-        "row": 8,
+        "answer": "EVIDENCE",
+        "row": 10,
         "col": 0,
-        "clue": "One who examines data closely (7)"
+        "clue": "Facts supporting an investigation or claim"
       }
     ]
   },
