@@ -1,11 +1,11 @@
 {
   "site": {
     "name": "THE INTELLIGENCE",
-    "school": "INFORM • INVESTIGATE • INSPIRE",
+    "school": "INFORM \u2022 INVESTIGATE \u2022 INSPIRE",
     "subtitle": "The official student newspaper",
-    "edition": "VOL. 01 • ISSUE 01 • SEPTEMBER 2026",
+    "edition": "VOL. 01 \u2022 ISSUE 01 \u2022 SEPTEMBER 2026",
     "heroTitle": "A NEW YEAR. A NEW OPERATION.",
-    "heroText": "Welcome to The Intelligence — a student newspaper designed to keep the whole school informed, involved and curious about what is happening around campus.",
+    "heroText": "Welcome to The Intelligence \u2014 a student newspaper designed to keep the whole school informed, involved and curious about what is happening around campus.",
     "heroImage": "assets/campus.jpg",
     "alert": "BREAKING: STUDENT LIFE IS NOW OFFICIALLY UNDER INVESTIGATION."
   },
@@ -34,65 +34,48 @@
       "day": "12",
       "month": "SEP",
       "title": "Inter-House Football",
-      "details": "All Secondary • Sports Field • 3:30 PM",
+      "details": "All Secondary \u2022 Sports Field \u2022 3:30 PM",
       "type": "SPORT"
     },
     {
       "day": "18",
       "month": "SEP",
       "title": "Student Council Elections",
-<<<<<<< HEAD
-      "details": "All Students • Main Hall • Lunch",
-=======
-      "details": "All Years • Main Hall • Lunch",
->>>>>>> 0d02aefe8bda2be837cf14dc732468671f8a0c88
+      "details": "All Years \u2022 Main Hall \u2022 Lunch",
       "type": "STUDENT VOICE"
     },
     {
       "day": "25",
       "month": "SEP",
-<<<<<<< HEAD
-      "title": "Science Fair",
-      "details": "Science Block • 2:00 PM",
-=======
       "title": "Year 8 Science Fair",
-      "details": "Year 8 • Science Block • 2:00 PM",
->>>>>>> 0d02aefe8bda2be837cf14dc732468671f8a0c88
+      "details": "Year 8 \u2022 Science Block \u2022 2:00 PM",
       "type": "ACADEMIC"
     },
     {
       "day": "30",
       "month": "SEP",
       "title": "Clubs Showcase",
-      "details": "All Secondary • Main Hall • Lunch",
+      "details": "All Secondary \u2022 Main Hall \u2022 Lunch",
       "type": "CLUBS"
     }
   ],
   "hallOfFame": [
     {
-<<<<<<< HEAD
-      "tag": "SECONDARY SPOTLIGHT",
-=======
-      "tag": "YEAR 9 • SPOTLIGHT",
->>>>>>> 0d02aefe8bda2be837cf14dc732468671f8a0c88
+      "tag": "YEAR 9 \u2022 SPOTLIGHT",
       "title": "Science Investigation of the Month",
       "text": "An outstanding investigation into renewable energy, selected for clear reasoning, presentation and originality.",
       "image": "assets/campus_wide.png",
       "featured": true
     },
     {
-      "tag": "CREATIVE SHOWCASE",
+      "tag": "YEAR 7",
       "title": "Artwork of the Week",
-<<<<<<< HEAD
-      "text": "“The City at Night” — selected by the Art Department.",
-=======
-      "text": "\"The City at Night\" - selected by the Art Department.",
->>>>>>> 0d02aefe8bda2be837cf14dc732468671f8a0c88
+      "text": "\u201cThe City at Night\u201d \u2014 selected by the Art Department.",
       "image": "",
       "featured": false
     },
     {
-      "tag": "WRITING SHOWCASE",
+      "tag": "YEAR 8",
       "title": "Writing of the Week",
       "text": "A creative short story selected from this month's English submissions.",
       "image": "",
@@ -122,322 +105,96 @@
       "month": "SEPTEMBER 2026",
       "issue": "Issue 01",
       "title": "Welcome Back Edition",
-      "text": "Clubs • Events • Student Council",
+      "text": "Clubs \u2022 Events \u2022 Student Council",
       "pdf": "past_editions/september_2026.pdf"
     },
     {
       "month": "JUNE 2026",
       "issue": "End of Year",
       "title": "Year in Review",
-      "text": "Awards • Highlights • Student Work",
+      "text": "Awards \u2022 Highlights \u2022 Student Work",
       "pdf": "past_editions/june_2026.pdf"
     },
     {
       "month": "MARCH 2026",
       "issue": "Spring",
       "title": "Spring Edition",
-      "text": "Events • Competitions • Student Work",
+      "text": "Events \u2022 Competitions \u2022 Student Work",
       "pdf": "past_editions/march_2026.pdf"
     }
   ],
-<<<<<<< HEAD
   "riddle": {
     "title": "Riddle of the Week",
-    "question": "I tell a story but never speak.\nI have pages but I am not a book.\nWhat am I?",
-    "answer": "A NEWSPAPER"
+    "question": "I have keys but open no locks.\\nI have space but no room.\\nYou can enter, but you can't go inside.",
+    "answer": "A KEYBOARD"
   },
-  "puzzleExtras": {
-    "scramble": {
-      "title": "Word mix",
-      "prompt": "R E P O R T E R",
-      "hint": "Unscramble this newspaper role.",
-      "answer": "REPORTER"
-    },
-    "cipher": {
-      "title": "Cipher sprint",
-      "prompt": "K H D G O L Q H",
-      "hint": "Caesar shift: move every letter back three places.",
-      "answer": "HEADLINE"
-    }
-  },
-=======
-  "riddles": [
-    {
-      "title": "Riddle of the Week",
-      "question": "I speak without a mouth and hear without ears. I have no body, but I come alive with wind. What am I?",
-      "answer": "AN ECHO"
-    },
-    {
-      "title": "Challenge Riddle",
-      "question": "The more you take, the more you leave behind. What am I?",
-      "answer": "FOOTSTEPS"
-    },
-    {
-      "title": "Brain Teaser",
-      "question": "I have cities but no houses, forests but no trees, and water but no fish. What am I?",
-      "answer": "A MAP"
-    },
-    {
-      "title": "Lateral Puzzle",
-      "question": "What has a neck but no head?",
-      "answer": "A BOTTLE"
-    }
-  ],
->>>>>>> 0d02aefe8bda2be837cf14dc732468671f8a0c88
   "crossword": {
-    "rows": 17,
-    "cols": 17,
+    "rows": 11,
+    "cols": 9,
     "entries": [
       {
         "number": 1,
-<<<<<<< HEAD
-        "direction": "down",
-        "answer": "WRITER",
-        "row": 0,
-        "col": 1,
-        "clue": "A person who creates articles, stories or poems."
-=======
         "direction": "across",
-        "answer": "INVESTIGATION",
+        "answer": "HISTORY",
         "row": 0,
         "col": 0,
-        "clue": "Thorough examination or inquiry into something"
->>>>>>> 0d02aefe8bda2be837cf14dc732468671f8a0c88
+        "clue": "History: The study of events from the past."
       },
       {
         "number": 2,
         "direction": "down",
-<<<<<<< HEAD
-        "answer": "FEATURE",
-        "row": 0,
-        "col": 16,
-        "clue": "An in-depth newspaper article on a topic or person."
-      },
-      {
-        "number": 3,
-        "direction": "across",
-        "answer": "ARTICLE",
-        "row": 1,
-        "col": 0,
-        "clue": "A piece of writing published in a newspaper or magazine."
-      },
-      {
-        "number": 4,
-        "direction": "across",
-        "answer": "THEATRE",
-        "row": 1,
-        "col": 10,
-        "clue": "The place where a play is performed."
-=======
-        "answer": "NONFICTION",
+        "answer": "RHYTHM",
         "row": 0,
         "col": 5,
-        "clue": "True stories and factual accounts"
+        "clue": "Music: A pattern of beats in a piece of music."
       },
       {
         "number": 3,
         "direction": "down",
-        "answer": "REPORTER",
+        "answer": "CANVAS",
         "row": 0,
         "col": 8,
-        "clue": "Journalist who gathers and reports the news"
+        "clue": "Art: A surface used for painting."
       },
       {
         "number": 4,
         "direction": "down",
-        "answer": "INSPIRE",
+        "answer": "LANGUAGE",
         "row": 3,
         "col": 3,
-        "clue": "To motivate or fill with enthusiasm"
->>>>>>> 0d02aefe8bda2be837cf14dc732468671f8a0c88
+        "clue": "English: A system of words used to communicate."
       },
       {
         "number": 5,
         "direction": "down",
-<<<<<<< HEAD
-        "answer": "STUDENT",
-        "row": 3,
-        "col": 4,
-        "clue": "A person who attends school to learn."
-=======
-        "answer": "PUBLISH",
+        "answer": "OCEAN",
         "row": 4,
         "col": 1,
-        "clue": "To release information for public distribution"
->>>>>>> 0d02aefe8bda2be837cf14dc732468671f8a0c88
+        "clue": "Geography: A huge body of salt water."
       },
       {
         "number": 6,
         "direction": "across",
-<<<<<<< HEAD
-        "answer": "OPINION",
-        "row": 3,
-        "col": 6,
-        "clue": "A personal view or judgement."
-=======
-        "answer": "RESEARCH",
+        "answer": "ECONOMICS",
         "row": 5,
         "col": 0,
-        "clue": "Systematic investigation or study of facts"
->>>>>>> 0d02aefe8bda2be837cf14dc732468671f8a0c88
+        "clue": "Social studies: The study of money, resources and trade."
       },
       {
         "number": 7,
         "direction": "down",
-<<<<<<< HEAD
-        "answer": "PUBLISH",
-        "row": 3,
-        "col": 7,
-        "clue": "To prepare writing so it can be read by others."
-=======
-        "answer": "ARCHIVE",
+        "answer": "CELL",
         "row": 5,
         "col": 7,
-        "clue": "Collection of historical records or documents"
->>>>>>> 0d02aefe8bda2be837cf14dc732468671f8a0c88
+        "clue": "Science: The basic unit of life."
       },
       {
         "number": 8,
         "direction": "across",
-<<<<<<< HEAD
-        "answer": "DEBATE",
-        "row": 4,
-        "col": 0,
-        "clue": "A structured discussion with opposing viewpoints."
-      },
-      {
-        "number": 9,
-        "direction": "down",
-        "answer": "CLUB",
-        "row": 4,
-        "col": 13,
-        "clue": "A group formed around a shared interest or activity."
-      },
-      {
-        "number": 10,
-        "direction": "down",
-        "answer": "CAMPUS",
-        "row": 5,
-        "col": 10,
-        "clue": "The buildings and grounds of a school."
-      },
-      {
-        "number": 11,
-        "direction": "across",
-        "answer": "LANGUAGE",
-        "row": 6,
-        "col": 9,
-        "clue": "A system of communication using words."
-      },
-      {
-        "number": 12,
-        "direction": "down",
-        "answer": "MUSIC",
-        "row": 7,
-        "col": 0,
-        "clue": "The art of arranging sound into melodies and rhythms."
-      },
-      {
-        "number": 13,
-        "direction": "down",
-        "answer": "GEOGRAPHY",
-        "row": 7,
-        "col": 2,
-        "clue": "The study of places, people and environments."
-      },
-      {
-        "number": 14,
-        "direction": "across",
-        "answer": "NEWSPAPER",
-        "row": 8,
-        "col": 4,
-        "clue": "A regular publication containing news, stories and opinions."
-      },
-      {
-        "number": 15,
-        "direction": "down",
-        "answer": "RIDDLE",
-        "row": 8,
-        "col": 12,
-        "clue": "A question or statement designed to puzzle you."
-      },
-      {
-        "number": 16,
-        "direction": "down",
-        "answer": "HISTORY",
-        "row": 8,
-        "col": 14,
-        "clue": "The study of past events."
-      },
-      {
-        "number": 17,
-        "direction": "across",
-        "answer": "SPORT",
-        "row": 9,
-        "col": 0,
-        "clue": "An organised physical activity or game."
-      },
-      {
-        "number": 18,
-        "direction": "down",
-        "answer": "ARCHIVE",
-        "row": 10,
-        "col": 16,
-        "clue": "A collection of records kept for future reference."
-      },
-      {
-        "number": 19,
-        "direction": "across",
-        "answer": "REPORTER",
-        "row": 11,
-        "col": 2,
-        "clue": "A journalist who gathers and writes news."
-      },
-      {
-        "number": 20,
-        "direction": "across",
-        "answer": "EDITOR",
-        "row": 11,
-        "col": 11,
-        "clue": "The person who prepares writing for publication."
-      },
-      {
-        "number": 21,
-        "direction": "across",
-        "answer": "POETRY",
-        "row": 13,
-        "col": 2,
-        "clue": "Writing that uses rhythm, imagery and carefully chosen words."
-      },
-      {
-        "number": 22,
-        "direction": "across",
-        "answer": "RESEARCH",
-        "row": 13,
-        "col": 9,
-        "clue": "Careful investigation to discover facts."
-      },
-      {
-        "number": 23,
-        "direction": "across",
-        "answer": "YEARBOOK",
-        "row": 15,
-        "col": 2,
-        "clue": "A book that records a school year in pictures and words."
-      },
-      {
-        "number": 24,
-        "direction": "across",
-        "answer": "SCIENCE",
-        "row": 16,
-        "col": 10,
-        "clue": "The study of the natural world through observation and experiment."
-=======
-        "answer": "EVIDENCE",
+        "answer": "NOVEL",
         "row": 10,
         "col": 0,
-        "clue": "Facts supporting an investigation or claim"
->>>>>>> 0d02aefe8bda2be837cf14dc732468671f8a0c88
+        "clue": "English: A long fictional book."
       }
     ]
   },
