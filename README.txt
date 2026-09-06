@@ -16,5 +16,3 @@ GITHUB PAGES
 CONTENT WORKFLOW
 Open admin.html, edit content, click Download content.json, then replace content.json in GitHub and commit.
 The crossword editor stores exact answer lengths and starting coordinates, so clues and the numbered grid stay in sync.
-
-Crossword fix: the live newspaper embeds the crossword data, so the grid renders even without fetching content.json.

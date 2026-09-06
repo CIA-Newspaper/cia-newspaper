@@ -1,11 +1,11 @@
 {
   "site": {
     "name": "THE INTELLIGENCE",
-    "school": "INFORM • INVESTIGATE • INSPIRE",
-    "subtitle": "The official student newspaper for Years 7–9",
-    "edition": "VOL. 01 • ISSUE 01 • SEPTEMBER 2026",
+    "school": "INFORM \u2022 INVESTIGATE \u2022 INSPIRE",
+    "subtitle": "The official student newspaper for Years 7\u20139",
+    "edition": "VOL. 01 \u2022 ISSUE 01 \u2022 SEPTEMBER 2026",
     "heroTitle": "A NEW YEAR. A NEW OPERATION.",
-    "heroText": "Welcome to The Intelligence — a student newspaper designed to keep Years 7–9 informed, involved and curious about what is happening around campus.",
+    "heroText": "Welcome to The Intelligence \u2014 a student newspaper designed to keep Years 7\u20139 informed, involved and curious about what is happening around campus.",
     "heroImage": "assets/campus.jpg",
     "alert": "BREAKING: STUDENT LIFE IS NOW OFFICIALLY UNDER INVESTIGATION."
   },
@@ -34,34 +34,34 @@
       "day": "12",
       "month": "SEP",
       "title": "Inter-House Football",
-      "details": "Years 7–9 • Sports Field • 3:30 PM",
+      "details": "Years 7\u20139 \u2022 Sports Field \u2022 3:30 PM",
       "type": "SPORT"
     },
     {
       "day": "18",
       "month": "SEP",
       "title": "Student Council Elections",
-      "details": "All Years • Main Hall • Lunch",
+      "details": "All Years \u2022 Main Hall \u2022 Lunch",
       "type": "STUDENT VOICE"
     },
     {
       "day": "25",
       "month": "SEP",
       "title": "Year 8 Science Fair",
-      "details": "Year 8 • Science Block • 2:00 PM",
+      "details": "Year 8 \u2022 Science Block \u2022 2:00 PM",
       "type": "ACADEMIC"
     },
     {
       "day": "30",
       "month": "SEP",
       "title": "Clubs Showcase",
-      "details": "Years 7–9 • Main Hall • Lunch",
+      "details": "Years 7\u20139 \u2022 Main Hall \u2022 Lunch",
       "type": "CLUBS"
     }
   ],
   "hallOfFame": [
     {
-      "tag": "YEAR 9 • SPOTLIGHT",
+      "tag": "YEAR 9 \u2022 SPOTLIGHT",
       "title": "Science Investigation of the Month",
       "text": "An outstanding investigation into renewable energy, selected for clear reasoning, presentation and originality.",
       "image": "assets/campus_wide.png",
@@ -70,7 +70,7 @@
     {
       "tag": "YEAR 7",
       "title": "Artwork of the Week",
-      "text": "“The City at Night” — selected by the Art Department.",
+      "text": "\u201cThe City at Night\u201d \u2014 selected by the Art Department.",
       "image": "",
       "featured": false
     },
@@ -105,21 +105,21 @@
       "month": "SEPTEMBER 2026",
       "issue": "Issue 01",
       "title": "Welcome Back Edition",
-      "text": "Clubs • Events • Student Council",
+      "text": "Clubs \u2022 Events \u2022 Student Council",
       "pdf": "past_editions/september_2026.pdf"
     },
     {
       "month": "JUNE 2026",
       "issue": "End of Year",
       "title": "Year in Review",
-      "text": "Awards • Highlights • Student Work",
+      "text": "Awards \u2022 Highlights \u2022 Student Work",
       "pdf": "past_editions/june_2026.pdf"
     },
     {
       "month": "MARCH 2026",
       "issue": "Spring",
       "title": "Spring Edition",
-      "text": "Events • Competitions • Student Work",
+      "text": "Events \u2022 Competitions \u2022 Student Work",
       "pdf": "past_editions/march_2026.pdf"
     }
   ],
@@ -135,66 +135,66 @@
       {
         "number": 1,
         "direction": "across",
-        "answer": "CHARACTER",
+        "answer": "HISTORY",
         "row": 0,
         "col": 0,
-        "clue": "English: Person in a story."
+        "clue": "History: The study of events from the past."
       },
       {
         "number": 2,
         "direction": "down",
-        "answer": "KING",
-        "row": 2,
-        "col": 2,
-        "clue": "History: Ruler of a kingdom."
+        "answer": "RHYTHM",
+        "row": 0,
+        "col": 5,
+        "clue": "Music: A pattern of beats in a piece of music."
       },
       {
         "number": 3,
-        "direction": "across",
-        "answer": "TRIANGLE",
-        "row": 3,
-        "col": 0,
-        "clue": "Maths: Three-sided shape."
+        "direction": "down",
+        "answer": "CANVAS",
+        "row": 0,
+        "col": 8,
+        "clue": "Art: A surface used for painting."
       },
       {
         "number": 4,
         "direction": "down",
-        "answer": "GRAVITY",
+        "answer": "LANGUAGE",
         "row": 3,
-        "col": 5,
-        "clue": "Science: Force pulling objects down."
+        "col": 3,
+        "clue": "English: A system of words used to communicate."
       },
       {
         "number": 5,
         "direction": "down",
-        "answer": "EVEN",
-        "row": 3,
-        "col": 7,
-        "clue": "Maths: Number divisible by two."
+        "answer": "OCEAN",
+        "row": 4,
+        "col": 1,
+        "clue": "Geography: A huge body of salt water."
       },
       {
         "number": 6,
-        "direction": "down",
-        "answer": "OCEAN",
+        "direction": "across",
+        "answer": "ECONOMICS",
         "row": 5,
         "col": 0,
-        "clue": "Geography: Large body of salt water."
+        "clue": "Social studies: The study of money, resources and trade."
       },
       {
         "number": 7,
-        "direction": "across",
+        "direction": "down",
         "answer": "CELL",
-        "row": 6,
-        "col": 0,
-        "clue": "Science: Basic unit of life."
+        "row": 5,
+        "col": 7,
+        "clue": "Science: The basic unit of life."
       },
       {
         "number": 8,
         "direction": "across",
-        "answer": "ICE",
+        "answer": "NOVEL",
         "row": 10,
         "col": 0,
-        "clue": "Geography: Frozen water."
+        "clue": "English: A long fictional book."
       }
     ]
   },
