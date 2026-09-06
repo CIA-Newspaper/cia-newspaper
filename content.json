@@ -4,37 +4,124 @@
     "school": "INFORM • INVESTIGATE • INSPIRE",
     "subtitle": "The official student newspaper",
     "edition": "VOL. 01 • ISSUE 01 • SEPTEMBER 2026",
-    "heroTitle": "A NEW YEAR. A NEW OPERATION.",
-    "heroText": "Welcome to The Intelligence — a student newspaper designed to keep the whole school informed, involved and curious about what is happening around campus.",
+    "heroTitle": "PLACEHOLDER HEADLINE",
+    "heroText": "Placeholder text for the main newspaper introduction. This space can be replaced with the latest school news, featured story or issue introduction.",
     "heroImage": "assets/campus.jpg",
-    "alert": "BREAKING: STUDENT LIFE IS NOW OFFICIALLY UNDER INVESTIGATION."
+    "alert": "BREAKING: PLACEHOLDER NEWS UPDATE."
   },
   "clubs": [
-    {"tag": "SPORT", "title": "Basketball Club", "text": "Improve your game, compete and meet other students. Tuesdays after school.", "details": "Meet in the Sports Hall every Tuesday after school. Bring your PE kit and water."},
-    {"tag": "CREATIVE", "title": "Art & Design", "text": "Drawing, painting, design and creative projects. Beginners are welcome.", "details": "The creative department is open to anyone who wants to make something."},
-    {"tag": "ACADEMIC", "title": "Science Club", "text": "Experiments, competitions and science beyond the normal classroom mission.", "details": "Experiments, challenges and science competitions. Ask your Science teacher for the next meeting time."}
+    {
+      "tag": "SPORT",
+      "title": "Placeholder Club",
+      "text": "Placeholder description for a club advertisement.",
+      "details": "Placeholder information about the club, including meeting times, location and how students can join."
+    },
+    {
+      "tag": "CREATIVE",
+      "title": "Placeholder Creative Club",
+      "text": "Placeholder description for a creative club.",
+      "details": "Placeholder information about activities, meetings and participation."
+    },
+    {
+      "tag": "ACADEMIC",
+      "title": "Placeholder Academic Club",
+      "text": "Placeholder description for an academic club.",
+      "details": "Placeholder information about meetings, activities, competitions and membership."
+    }
   ],
   "events": [
-    {"day": "12", "month": "SEP", "title": "Inter-House Football", "details": "All Secondary • Sports Field • 3:30 PM", "type": "SPORT"},
-    {"day": "18", "month": "SEP", "title": "Student Council Elections", "details": "All Years • Main Hall • Lunch", "type": "STUDENT VOICE"},
-    {"day": "25", "month": "SEP", "title": "Year 8 Science Fair", "details": "Year 8 • Science Block • 2:00 PM", "type": "ACADEMIC"},
-    {"day": "30", "month": "SEP", "title": "Clubs Showcase", "details": "All Secondary • Main Hall • Lunch", "type": "CLUBS"}
+    {
+      "day": "00",
+      "month": "MON",
+      "title": "Placeholder Event",
+      "details": "All Years • Placeholder Location • Placeholder Time",
+      "type": "EVENT"
+    },
+    {
+      "day": "00",
+      "month": "MON",
+      "title": "Placeholder School Event",
+      "details": "All Years • Placeholder Location • Placeholder Time",
+      "type": "STUDENT VOICE"
+    },
+    {
+      "day": "00",
+      "month": "MON",
+      "title": "Placeholder Academic Event",
+      "details": "Placeholder Year Group • Placeholder Location • Placeholder Time",
+      "type": "ACADEMIC"
+    },
+    {
+      "day": "00",
+      "month": "MON",
+      "title": "Placeholder Clubs Event",
+      "details": "All Secondary • Placeholder Location • Placeholder Time",
+      "type": "CLUBS"
+    }
   ],
   "hallOfFame": [
-    {"tag": "YEAR 9 • SPOTLIGHT", "title": "Science Investigation of the Month", "text": "An outstanding investigation into renewable energy, selected for clear reasoning, presentation and originality.", "image": "assets/campus_wide.png", "featured": true},
-    {"tag": "YEAR 7", "title": "Artwork of the Week", "text": "“The City at Night” — selected by the Art Department.", "image": "", "featured": false},
-    {"tag": "YEAR 8", "title": "Writing of the Week", "text": "A creative short story selected from this month's English submissions.", "image": "", "featured": false}
+    {
+      "tag": "FEATURED • SPOTLIGHT",
+      "title": "Placeholder Student Achievement",
+      "text": "Placeholder description for an outstanding piece of student work or achievement.",
+      "image": "assets/campus_wide.png",
+      "featured": true
+    },
+    {
+      "tag": "YEAR GROUP",
+      "title": "Placeholder Artwork",
+      "text": "Placeholder description for featured student artwork.",
+      "image": "",
+      "featured": false
+    },
+    {
+      "tag": "YEAR GROUP",
+      "title": "Placeholder Writing",
+      "text": "Placeholder description for featured student writing.",
+      "image": "",
+      "featured": false
+    }
   ],
   "announcements": [
-    {"tag": "STUDENT COUNCIL", "text": "Applications for student leadership positions are now open."},
-    {"tag": "SPORTS", "text": "Remember to bring appropriate sports equipment for PE this week."},
-    {"tag": "LIBRARY", "text": "New books have arrived. Check the new arrivals shelf."},
-    {"tag": "REMINDER", "text": "Check your year-group Teams page for important updates."}
+    {
+      "tag": "ANNOUNCEMENT",
+      "text": "Placeholder morning announcement."
+    },
+    {
+      "tag": "SPORTS",
+      "text": "Placeholder sports announcement."
+    },
+    {
+      "tag": "LIBRARY",
+      "text": "Placeholder library announcement."
+    },
+    {
+      "tag": "REMINDER",
+      "text": "Placeholder reminder for students."
+    }
   ],
   "newsletters": [
-    {"month": "SEPTEMBER 2026", "issue": "Issue 01", "title": "Welcome Back Edition", "text": "Clubs • Events • Student Council", "pdf": "past_editions/september_2026.pdf"},
-    {"month": "JUNE 2026", "issue": "End of Year", "title": "Year in Review", "text": "Awards • Highlights • Student Work", "pdf": "past_editions/june_2026.pdf"},
-    {"month": "MARCH 2026", "issue": "Spring", "title": "Spring Edition", "text": "Events • Competitions • Student Work", "pdf": "past_editions/march_2026.pdf"}
+    {
+      "month": "MONTH YEAR",
+      "issue": "Issue 00",
+      "title": "Placeholder Newsletter",
+      "text": "Placeholder • Placeholder • Placeholder",
+      "pdf": "past_editions/september_2026.pdf"
+    },
+    {
+      "month": "MONTH YEAR",
+      "issue": "Previous Edition",
+      "title": "Placeholder Previous Newsletter",
+      "text": "Placeholder • Placeholder • Placeholder",
+      "pdf": "past_editions/june_2026.pdf"
+    },
+    {
+      "month": "MONTH YEAR",
+      "issue": "Previous Edition",
+      "title": "Placeholder Newsletter",
+      "text": "Placeholder • Placeholder • Placeholder",
+      "pdf": "past_editions/march_2026.pdf"
+    }
   ],
   "riddle": {
     "title": "Riddle of the Week",
