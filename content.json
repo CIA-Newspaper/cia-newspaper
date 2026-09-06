@@ -1,11 +1,11 @@
 {
   "site": {
     "name": "THE INTELLIGENCE",
-    "school": "INFORM \u2022 INVESTIGATE \u2022 INSPIRE",
+    "school": "INFORM • INVESTIGATE • INSPIRE",
     "subtitle": "The official student newspaper",
-    "edition": "VOL. 01 \u2022 ISSUE 01 \u2022 SEPTEMBER 2026",
+    "edition": "VOL. 01 • ISSUE 01 • SEPTEMBER 2026",
     "heroTitle": "A NEW YEAR. A NEW OPERATION.",
-    "heroText": "Welcome to The Intelligence \u2014 a student newspaper designed to keep the whole school informed, involved and curious about what is happening around campus.",
+    "heroText": "Welcome to The Intelligence — a student newspaper designed to keep the whole school informed, involved and curious about what is happening around campus.",
     "heroImage": "assets/campus.jpg",
     "alert": "BREAKING: STUDENT LIFE IS NOW OFFICIALLY UNDER INVESTIGATION."
   },
@@ -34,34 +34,34 @@
       "day": "12",
       "month": "SEP",
       "title": "Inter-House Football",
-      "details": "All Secondary \u2022 Sports Field \u2022 3:30 PM",
+      "details": "All Secondary • Sports Field • 3:30 PM",
       "type": "SPORT"
     },
     {
       "day": "18",
       "month": "SEP",
       "title": "Student Council Elections",
-      "details": "All Years \u2022 Main Hall \u2022 Lunch",
+      "details": "All Years • Main Hall • Lunch",
       "type": "STUDENT VOICE"
     },
     {
       "day": "25",
       "month": "SEP",
       "title": "Year 8 Science Fair",
-      "details": "Year 8 \u2022 Science Block \u2022 2:00 PM",
+      "details": "Year 8 • Science Block • 2:00 PM",
       "type": "ACADEMIC"
     },
     {
       "day": "30",
       "month": "SEP",
       "title": "Clubs Showcase",
-      "details": "All Secondary \u2022 Main Hall \u2022 Lunch",
+      "details": "All Secondary • Main Hall • Lunch",
       "type": "CLUBS"
     }
   ],
   "hallOfFame": [
     {
-      "tag": "YEAR 9 \u2022 SPOTLIGHT",
+      "tag": "YEAR 9 • SPOTLIGHT",
       "title": "Science Investigation of the Month",
       "text": "An outstanding investigation into renewable energy, selected for clear reasoning, presentation and originality.",
       "image": "assets/campus_wide.png",
@@ -70,7 +70,7 @@
     {
       "tag": "YEAR 7",
       "title": "Artwork of the Week",
-      "text": "\u201cThe City at Night\u201d \u2014 selected by the Art Department.",
+      "text": ""The City at Night" — selected by the Art Department.",
       "image": "",
       "featured": false
     },
@@ -105,96 +105,129 @@
       "month": "SEPTEMBER 2026",
       "issue": "Issue 01",
       "title": "Welcome Back Edition",
-      "text": "Clubs \u2022 Events \u2022 Student Council",
+      "text": "Clubs • Events • Student Council",
       "pdf": "past_editions/september_2026.pdf"
     },
     {
       "month": "JUNE 2026",
       "issue": "End of Year",
       "title": "Year in Review",
-      "text": "Awards \u2022 Highlights \u2022 Student Work",
+      "text": "Awards • Highlights • Student Work",
       "pdf": "past_editions/june_2026.pdf"
     },
     {
       "month": "MARCH 2026",
       "issue": "Spring",
       "title": "Spring Edition",
-      "text": "Events \u2022 Competitions \u2022 Student Work",
+      "text": "Events • Competitions • Student Work",
       "pdf": "past_editions/march_2026.pdf"
     }
   ],
-  "riddle": {
-    "title": "Riddle of the Week",
-    "question": "I have keys but open no locks.\\nI have space but no room.\\nYou can enter, but you can't go inside.",
-    "answer": "A KEYBOARD"
-  },
+  "riddles": [
+    {
+      "title": "Riddle of the Week",
+      "question": "I speak without a mouth and hear without ears. I have no body, but I come alive with wind. What am I?",
+      "answer": "AN ECHO"
+    },
+    {
+      "title": "Challenge Riddle",
+      "question": "The more you take, the more you leave behind. What am I?",
+      "answer": "FOOTSTEPS"
+    },
+    {
+      "title": "Brain Teaser",
+      "question": "I have cities but no houses, forests but no trees, and water but no fish. What am I?",
+      "answer": "A MAP"
+    },
+    {
+      "title": "Lateral Puzzle",
+      "question": "What has a neck but no head?",
+      "answer": "A BOTTLE"
+    }
+  ],
   "crossword": {
     "rows": 11,
-    "cols": 9,
+    "cols": 11,
     "entries": [
       {
         "number": 1,
         "direction": "across",
-        "answer": "HISTORY",
+        "answer": "INVESTIGATION",
         "row": 0,
         "col": 0,
-        "clue": "History: The study of events from the past."
+        "clue": "Thorough examination or inquiry (13)"
+      },
+      {
+        "number": 1,
+        "direction": "down",
+        "answer": "INSPIRE",
+        "row": 0,
+        "col": 0,
+        "clue": "To motivate or fill with enthusiasm (7)"
       },
       {
         "number": 2,
         "direction": "down",
-        "answer": "RHYTHM",
+        "answer": "NONFICTION",
         "row": 0,
-        "col": 5,
-        "clue": "Music: A pattern of beats in a piece of music."
+        "col": 12,
+        "clue": "True stories and factual accounts (10)"
       },
       {
         "number": 3,
-        "direction": "down",
-        "answer": "CANVAS",
-        "row": 0,
-        "col": 8,
-        "clue": "Art: A surface used for painting."
+        "direction": "across",
+        "answer": "REPORTER",
+        "row": 2,
+        "col": 0,
+        "clue": "Journalist who gathers news (8)"
       },
       {
         "number": 4,
         "direction": "down",
-        "answer": "LANGUAGE",
-        "row": 3,
+        "answer": "PUBLISH",
+        "row": 2,
         "col": 3,
-        "clue": "English: A system of words used to communicate."
+        "clue": "To release for public distribution (7)"
       },
       {
         "number": 5,
-        "direction": "down",
-        "answer": "OCEAN",
+        "direction": "across",
+        "answer": "DOCUMENT",
         "row": 4,
-        "col": 1,
-        "clue": "Geography: A huge body of salt water."
+        "col": 0,
+        "clue": "Official written record (8)"
       },
       {
         "number": 6,
-        "direction": "across",
-        "answer": "ECONOMICS",
+        "direction": "down",
+        "answer": "RESEARCH",
         "row": 5,
-        "col": 0,
-        "clue": "Social studies: The study of money, resources and trade."
+        "col": 8,
+        "clue": "Systematic investigation (8)"
       },
       {
         "number": 7,
-        "direction": "down",
-        "answer": "CELL",
-        "row": 5,
-        "col": 7,
-        "clue": "Science: The basic unit of life."
+        "direction": "across",
+        "answer": "ARCHIVE",
+        "row": 6,
+        "col": 0,
+        "clue": "Collection of historical records (7)"
       },
       {
         "number": 8,
+        "direction": "down",
+        "answer": "EVIDENCE",
+        "row": 6,
+        "col": 5,
+        "clue": "Facts supporting a claim (8)"
+      },
+      {
+        "number": 9,
         "direction": "across",
-        "answer": "NOVEL",
-        "row": 10,
+        "answer": "ANALYST",
+        "row": 8,
         "col": 0,
-        "clue": "English: A long fictional book."
+        "clue": "One who examines data closely (7)"
       }
     ]
   },
