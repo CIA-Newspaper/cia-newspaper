@@ -241,7 +241,7 @@ footer strong{color:var(--gold2);font-size:16px}
     <a href="#briefing">Morning Briefing</a>
     <a href="#archive">Archive</a>
     <a href="#puzzles">Puzzles</a>
-    <a href="#suggest">Suggestion Box</a>
+    <a href="#suggest">Suggestion Box</a><a href="#credits">Credits</a>
   </nav>
 
   <main class="content">
@@ -318,9 +318,9 @@ footer strong{color:var(--gold2);font-size:16px}
     <section id="archive" class="section">
       <div class="section-title"><h2>THE ARCHIVE</h2><span>Previous editions</span></div>
       <div class="newsletters">
-        <div class="newsletter"><div class="cover">SEPTEMBER<br>2026</div><small>Issue 01</small><h3>Welcome Back Edition</h3><p>Clubs • Events • Student Council</p><button class="btn" onclick="openModal('September 2026','This edition would contain the full digital newsletter or PDF.')">Read Edition</button></div>
-        <div class="newsletter"><div class="cover">JUNE<br>2026</div><small>End of Year</small><h3>Year in Review</h3><p>Awards • Highlights • Student Work</p><button class="btn" onclick="openModal('June 2026','This edition would contain the full digital newsletter or PDF.')">Read Edition</button></div>
-        <div class="newsletter"><div class="cover">MARCH<br>2026</div><small>Spring</small><h3>Spring Edition</h3><p>Events • Competitions • Student Work</p><button class="btn" onclick="openModal('March 2026','This edition would contain the full digital newsletter or PDF.')">Read Edition</button></div>
+        <div class="newsletter"><div class="cover">SEPTEMBER<br>2026</div><small>Issue 01</small><h3>Welcome Back Edition</h3><p>Clubs • Events • Student Council</p><a class="btn" href="past_editions/september_2026.pdf" target="_blank">Read Edition</a></div>
+        <div class="newsletter"><div class="cover">JUNE<br>2026</div><small>End of Year</small><h3>Year in Review</h3><p>Awards • Highlights • Student Work</p><a class="btn" href="past_editions/june_2026.pdf" target="_blank">Read Edition</a></div>
+        <div class="newsletter"><div class="cover">MARCH<br>2026</div><small>Spring</small><h3>Spring Edition</h3><p>Events • Competitions • Student Work</p><a class="btn" href="past_editions/march_2026.pdf" target="_blank">Read Edition</a></div>
       </div>
     </section>
 
@@ -336,20 +336,30 @@ footer strong{color:var(--gold2);font-size:16px}
 
         <div class="crossword">
           <h3>Subject Crossword</h3>
-          <p>Use keywords from Maths, Science, English, History and Geography.</p>
-          <div class="grid8">
-            <input maxlength="1"><input maxlength="1"><input maxlength="1"><input class="block"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input class="block">
-            <input maxlength="1"><input class="block"><input maxlength="1"><input class="block"><input maxlength="1"><input class="block"><input maxlength="1"><input maxlength="1">
-            <input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input class="block"><input maxlength="1">
-            <input class="block"><input class="block"><input maxlength="1"><input class="block"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1">
-            <input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input class="block"><input maxlength="1"><input maxlength="1"><input maxlength="1">
-            <input maxlength="1"><input class="block"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input class="block"><input maxlength="1"><input class="block">
-            <input maxlength="1"><input maxlength="1"><input class="block"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1">
-            <input class="block"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input class="block"><input maxlength="1"><input maxlength="1"><input maxlength="1">
+          <p>Fill the grid, then submit your answers. The newspaper will tell you exactly which letters are right or wrong.</p>
+
+          <div class="grid8" id="crosswordGrid">
+            <input data-answer="C"><input data-answer="E"><input data-answer="L"><input class="block"><input data-answer="M"><input data-answer="A"><input data-answer="P"><input class="block">
+            <input data-answer="C"><input class="block"><input data-answer="E"><input class="block"><input data-answer="A"><input class="block"><input data-answer="O"><input data-answer="C">
+            <input data-answer="I"><input data-answer="C"><input data-answer="E"><input data-answer="A"><input data-answer="R"><input data-answer="C"><input class="block"><input data-answer="N">
+            <input class="block"><input class="block"><input data-answer="T"><input class="block"><input data-answer="T"><input data-answer="I"><input data-answer="M"><input data-answer="A">
+            <input data-answer="T"><input data-answer="R"><input data-answer="I"><input data-answer="A"><input class="block"><input data-answer="O"><input data-answer="C"><input data-answer="E">
+            <input data-answer="E"><input class="block"><input data-answer="G"><input data-answer="R"><input data-answer="A"><input class="block"><input data-answer="E"><input class="block">
+            <input data-answer="E"><input data-answer="V"><input class="block"><input data-answer="M"><input data-answer="A"><input data-answer="S"><input data-answer="S"><input data-answer="E">
+            <input class="block"><input data-answer="S"><input data-answer="E"><input data-answer="A"><input class="block"><input data-answer="E"><input data-answer="A"><input data-answer="L">
           </div>
-          <div class="clues"><b>Across:</b> basic unit of life • three-sided shape • frozen water • person in a story<br><br><b>Down:</b> ruler of a kingdom • force pulling objects down • number divisible by two • large body of salt water</div>
+
+          <button class="btn" onclick="checkCrossword()">Check Crossword</button>
+          <button class="btn" onclick="resetCrossword()" style="background:#555">Reset</button>
+          <div id="crosswordResult" style="margin-top:12px;font-weight:bold"></div>
+
+          <div class="clues">
+            <b>Across:</b> basic unit of life • three-sided shape • frozen water • person in a story<br><br>
+            <b>Down:</b> ruler of a kingdom • force pulling objects down • number divisible by two • large body of salt water
+          </div>
         </div>
       </div>
+    </div>
     </section>
 
     <section id="suggest" class="section">
@@ -368,14 +378,17 @@ footer strong{color:var(--gold2);font-size:16px}
           <textarea id="suggestion" placeholder="Write your suggestion..." required></textarea>
           <button class="btn" type="submit">Transmit Suggestion</button>
           <p id="formMessage"></p>
+          <button type="button" class="btn" onclick="viewSubmissions()" style="margin-top:8px;background:#555">View Saved Submissions</button>
+          <button type="button" class="btn" onclick="downloadSubmissions()" style="margin-top:8px;background:#555">Export Submissions</button>
+          <p style="font-size:11px;color:#bbb;margin-top:8px">Submissions are saved in this browser. Export them to move/read them elsewhere.</p>
         </form>
       </div>
     </section>
   </main>
 
-  <footer>
+  <footer id="credits">
     <div><strong>THE INTELLIGENCE</strong><br>CIA Student Press • Years 7–9</div>
-    <div>READ. REPORT. PARTICIPATE.<br>Student journalism with school spirit.</div>
+    <div>READ. REPORT. PARTICIPATE.<br>Student journalism with school spirit.<br><br>Website & concept by <strong>Rushil Chauhan</strong></div>
   </footer>
 </div>
 
@@ -402,11 +415,93 @@ document.querySelectorAll('.grid8 input').forEach(cell=>{
 
 document.getElementById('suggestionForm').addEventListener('submit',e=>{
   e.preventDefault();
+  const suggestion = {
+    name: document.getElementById('name').value.trim() || 'Anonymous',
+    category: document.getElementById('type').value || 'Uncategorised',
+    message: document.getElementById('suggestion').value.trim(),
+    date: new Date().toLocaleString()
+  };
+  if (!suggestion.message) return;
+
+  const submissions = JSON.parse(localStorage.getItem('ciaSuggestions') || '[]');
+  submissions.push(suggestion);
+  localStorage.setItem('ciaSuggestions', JSON.stringify(submissions));
+
   const msg=document.getElementById('formMessage');
-  msg.textContent='✓ Suggestion received. Thank you for contributing.';
+  msg.textContent='✓ Suggestion saved successfully.';
   msg.style.color='var(--gold2)';
   e.target.reset();
 });
+
+function getSubmissions(){
+  return JSON.parse(localStorage.getItem('ciaSuggestions') || '[]');
+}
+
+function viewSubmissions(){
+  const submissions = getSubmissions();
+  if (!submissions.length) {
+    openModal('Saved Submissions','There are no saved suggestions yet.');
+    return;
+  }
+  const text = submissions.map((s,i)=>
+    `${i+1}. ${s.date}\nFrom: ${s.name}\nCategory: ${s.category}\n${s.message}`
+  ).join('\n\n--------------------\n\n');
+  openModal('Saved Suggestions', text);
+}
+
+function downloadSubmissions(){
+  const submissions = getSubmissions();
+  if (!submissions.length) {
+    openModal('Export', 'There are no submissions to export yet.');
+    return;
+  }
+  const blob = new Blob([JSON.stringify(submissions,null,2)], {type:'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'cia_suggestions.json';
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+function checkCrossword(){
+  const cells = [...document.querySelectorAll('#crosswordGrid input:not(.block)')];
+  let correct = 0, filled = 0;
+
+  cells.forEach(cell=>{
+    const value = cell.value.trim().toUpperCase();
+    if (value) filled++;
+    if (value === cell.dataset.answer) {
+      cell.style.background = '#d9ead3';
+      cell.style.border = '2px solid #38761d';
+      correct++;
+    } else if (value) {
+      cell.style.background = '#f4cccc';
+      cell.style.border = '2px solid #990000';
+    } else {
+      cell.style.background = '#fff';
+      cell.style.border = '1px solid #555';
+    }
+  });
+
+  const result = document.getElementById('crosswordResult');
+  if (correct === cells.length) {
+    result.textContent = '✓ CORRECT — excellent work. You solved the crossword!';
+    result.style.color = '#38761d';
+  } else {
+    result.textContent = `${correct}/${cells.length} correct. ${filled < cells.length ? 'Some squares are still empty.' : 'Red squares are wrong — try again.'}`;
+    result.style.color = '#741f31';
+  }
+}
+
+function resetCrossword(){
+  document.querySelectorAll('#crosswordGrid input:not(.block)').forEach(cell=>{
+    cell.value='';
+    cell.style.background='#fff';
+    cell.style.border='1px solid #555';
+  });
+  document.getElementById('crosswordResult').textContent='';
+}
 </script>
 </body>
 </html>
